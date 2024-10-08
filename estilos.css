@@ -1,0 +1,309 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('mcjgfondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #47525e;
+}
+
+.contrast_text--primary, .contrast_text--primary-hover:hover {
+    color: #D8CBA0;
+}
+/* Estilos para el anuncio del header */
+.header-anuncio {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* Estilos para el encabezado */
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center; /* Centra verticalmente */
+    min-height: 175px;
+}
+
+/* Search bar styles */
+.header-search {
+    flex: 1; /* Ocupa espacio restante a la izquierda */
+}
+
+.header-search__form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alinea la barra de búsqueda a la izquierda */
+    align-items: center;
+}
+
+.field__input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d9be7d; /* Color de fondo del botón */
+    color: #000;
+}
+
+.button:hover {
+    background-color: #bfa55b; /* Color de fondo del botón al hacer hover */
+}
+
+/* Logo styles */
+.header-logo {
+    flex: 0; /* El logo no debe estirarse */
+}
+
+.header-logo__image {
+    max-width: 150px;
+    height: auto;
+}
+
+/* User menu styles */
+.header-top__user {
+    flex: 1; /* Ocupa espacio restante a la derecha */
+    display: flex;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+.header-top__user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list__item {
+    margin: 0 10px;
+}
+
+.user-list__link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.user-list__link:hover {
+    color: #d9be7d; /* Color de texto en hover */
+}
+
+/* Container styles */
+.uk-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 960px) {
+    .uk-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 640px) {
+    .uk-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Barra de navegación */
+
+.li-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.li-bar ul {
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+.li-bar li {
+    margin: 5px 0;
+}
+
+.li-bar a {
+    color: white;
+    font-size: 16px;
+}
+.nav-bar {
+    display: block; /* Para que ocupe todo el ancho */
+    background-color: black; /* Fondo negro */
+    padding: 10px; /* Espaciado interno */
+}
+
+.header-menu__desktop-list {
+    list-style: none; /* Quitar el estilo de lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margen */
+    display: flex; /* Usar flexbox para alinear los elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.desktop-list__item {
+    position: relative; /* Necesario para los submenús */
+}
+
+.desktop-list__link {
+    display: block; /* Para que toda el área sea clickeable */
+    padding: 10px 15px; /* Espaciado interno */
+    color: #d9be7d; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.desktop-list__link:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+.nav.first {
+    display: none; /* Ocultar submenús por defecto */
+    position: absolute; /* Para que aparezcan sobre otros elementos */
+    background-color: black; /* Fondo negro para el submenú */
+    z-index: 10; /* Para que esté por encima de otros elementos */
+}
+
+.desktop-list__item:hover .nav.first {
+    display: block; /* Mostrar submenús al pasar el mouse */
+}
+
+.contrast_text--primary {
+    color: #d9be7d; /* Color de contraste para el texto */
+}
+
+.li-bar li:hover ul {
+    display: block;
+}
+
+/* Estilos del carrusel de imágenes */
+.jpg-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-images {
+    display: flex; /* Usar flexbox para alinear imágenes */
+    transition: transform 0.5s ease; /* Transición suave */
+    overflow: hidden; /* Ocultar imágenes que se desbordan */
+}
+.slider-images li {
+    min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+.slider-images img {
+    width: 100%;
+    display: block;
+}
+
+.slider-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-indicator li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-indicator li.active {
+    background-color: #000;
+}
+
+/* Estilos para la sección de productos */
+.bloque-productos {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.producto {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #333;
+}
+/* @media (max-width: 768px) {
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column; /* Cambia a una columna para pantallas pequeñas 
+    }
+
+    .nav-bar li {
+        margin-bottom: 10px; /* Espaciado entre elementos de la lista 
+    }
+
+    .jpg-slider li {
+        display: block; /* Hace que las imágenes sean apiladas 
+        margin-bottom: 10px; /* Espaciado entre imágenes 
+    }
+}
+
+/* Estilo para pantallas grandes 
+@media (min-width: 769px) {
+    .nav-bar ul {
+        display: flex; /* Mantenemos la disposición en fila en pantallas grandes 
+    }
+
+    .nav-bar li {
+        margin-right: 20px; /* Espaciado entre elementos de la lista 
+    }
+}
+*/
