@@ -35,11 +35,10 @@ button:hover {
 /* Estilos para el anuncio del header */
 .header-anuncio {
     background-color: #000;
-    padding: 10px 20px;
     text-align: center;
-    display: inline-block; /* Esto hará que el fondo se ajuste al texto */
+    display: block; /* Esto hará que el fondo se ajuste al texto */
     color: #fff; /* Cambia el color del texto si es necesario */
-    border-radius: 5px; /* (Opcional) Agrega esquinas redondeadas */
+    border-radius: 90px; /* (Opcional) Agrega esquinas redondeadas */
 }
 
 
@@ -202,7 +201,7 @@ button:hover {
 .desktop-list__link {
     display: block; 
     padding: 10px 15px;
-    color: #d9be7d; 
+    color: #ffffff; 
     text-transform: uppercase; 
     text-decoration: none;
 }
@@ -224,7 +223,8 @@ button:hover {
 
 
 .contrast_text--primary {
-    color: #d9be7d; 
+    color: #ffffff; 
+    font-size: 14px;
 }
 
 .li-bar li:hover ul {
