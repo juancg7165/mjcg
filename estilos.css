@@ -138,7 +138,7 @@ button:hover {
 }
 @media (max-width: 768px) {
     .header-menu__desktop-list {
-        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        flex-direction: row; /*ojardo, ajustar*/
         align-items: flex-start; /* Alinear a la izquierda */
         padding: 0; /* Quitar padding */
     }
