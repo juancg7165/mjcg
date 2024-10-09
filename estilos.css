@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #d9be7d, white);
+    background: linear-gradient(to top, #534b3b, white);
     background-size: cover;
     background-position: center;
 }
@@ -176,7 +176,7 @@ button:hover {
 }
 .nav-bar {
     display: block; /* Para que ocupe todo el ancho */
-    background-color: black; /* Fondo negro */
+    background-color: #534b3b; /* Fondo marroncito, que el background del body tenga gradiente tamb cone sto */
     padding: 10px; /* Espaciado interno */
     width: 100%; /* Asegura que ocupe todo el ancho */
 }
