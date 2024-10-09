@@ -136,7 +136,18 @@ button:hover {
         padding-right: 30px;
     }
 }
+@media (max-width: 768px) {
+    .header-menu__desktop-list {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+        padding: 0; /* Quitar padding */
+    }
 
+    .desktop-list__item {
+        width: 100%; /* Hacer que cada ítem ocupe todo el ancho */
+        text-align: left; /* Alinear el texto a la izquierda */
+    }
+}
 /* Barra de navegación */
 
 .li-bar {
@@ -165,6 +176,7 @@ button:hover {
     display: block; /* Para que ocupe todo el ancho */
     background-color: black; /* Fondo negro */
     padding: 10px; /* Espaciado interno */
+    width: 100%; /* Asegura que ocupe todo el ancho */
 }
 
 .header-menu__desktop-list {
@@ -173,6 +185,7 @@ button:hover {
     margin: 0; /* Quitar el margen */
     display: flex; /* Usar flexbox para alinear los elementos */
     align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples filas */
 }
 
 .desktop-list__item {
