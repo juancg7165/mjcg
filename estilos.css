@@ -31,9 +31,11 @@ button:hover {
 }
 /* Estilos para el anuncio del header */
 .header-anuncio {
-    background-color: #000000;
+    background-color: #000;
     padding: 10px;
     text-align: center;
+    display: inline-block; /* Esto hará que el fondo se ajuste al texto */
+    color: #fff; /* Cambia el color del texto si es necesario */
 }
 
 
