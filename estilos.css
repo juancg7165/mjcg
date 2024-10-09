@@ -144,6 +144,7 @@ button:hover {
 @media (max-width: 768px) {
     .header-menu__desktop-list {
         flex-direction: row; /*ojardo, ajustar*/
+        flex-wrap: nowrap;
         align-items: flex-start; /* Alinear a la izquierda */
         padding: 0; /* Quitar padding */
     }
@@ -190,7 +191,7 @@ button:hover {
     margin: 0; /* Quitar el margen */
     display: flex; /* Usar flexbox para alinear los elementos */
     align-items: center; /* Centrar verticalmente */
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples filas */
+    flex-wrap: 	nowrap; /* Permitir que los elementos se ajusten en múltiples filas */
 }
 
 .desktop-list__item {
