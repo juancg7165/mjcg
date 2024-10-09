@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('mcjgfondo.png');
+    background: linear-gradient(to bottom, #d9be7d, white);
     background-size: cover;
     background-position: center;
 }
@@ -111,7 +111,7 @@ button:hover {
 }
 
 .user-list__link:hover {
-    color: #d9be7d; /* Color de texto en hover */
+    color: #034ed8; /* Color de texto en hover */
 }
 
 /* Container styles */
