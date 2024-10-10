@@ -247,6 +247,7 @@ button:hover {
     display: flex; 
     transition: transform 0.5s ease; 
     align-items: stretch;
+    padding: 0; /*para que arranque bien desde la izq*/
 }
 .slider-images li {
     min-width: 100%; 
