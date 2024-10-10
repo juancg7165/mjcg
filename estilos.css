@@ -18,7 +18,7 @@ a {
 
 button {
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #534b3b;
     color: white;
     border: none;
     cursor: pointer;
@@ -293,8 +293,8 @@ button:hover {
     background-color: #f1f1f1;
     padding: 15px;
     margin: 10px;
-    border-radius: 10px;
-    width: 200px;
+    border-radius: 20px;
+    width: auto;
     text-align: center;
 }
 .producto p {
@@ -317,6 +317,27 @@ button:hover {
 .producto p {
     font-size: 16px;
     color: #333;
+}
+.boton-mas-productos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nose {
+    background-color: white;
+    color: #534b3b;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.nose:hover {
+    background-color: #f0f0f0;
 }
 /* @media (max-width: 768px) {
     .nav-bar ul {
