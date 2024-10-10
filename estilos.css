@@ -235,12 +235,17 @@ button:hover {
 
 .jpg-slider {
     position: relative;
-    width: 100%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 100%;
     margin: 20px auto;
     overflow: hidden;
+    max-height: 380px;
 }
-
+@media (max-width: 768px) {
+    .jpg-slider {
+        max-height: 300px;
+    }
+}
 .slider-images {
     display: flex; 
     transition: transform 0.5s ease; 
