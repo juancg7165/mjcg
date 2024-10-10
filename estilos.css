@@ -120,6 +120,7 @@ button:hover {
 }
 
 /* Container styles */
+/*
 .uk-container {
     max-width: 1200px;
     margin-left: auto;
@@ -140,7 +141,7 @@ button:hover {
         padding-left: 30px;
         padding-right: 30px;
     }
-}
+}*/
 @media (max-width: 768px) {
     .header-menu__desktop-list {
         flex-direction: row; /*ojardo, ajustar*/
@@ -239,17 +240,13 @@ button:hover {
     max-width: 100%;
     margin: 20px auto;
     overflow: hidden;
-    max-height: 380px;
+    max-height: 100%;
 }
-@media (max-width: 768px) {
-    .jpg-slider {
-        max-height: 300px;
-    }
-}
+
 .slider-images {
     display: flex; 
     transition: transform 0.5s ease; 
-     
+    align-items: stretch;
 }
 .slider-images li {
     min-width: 100%; 
