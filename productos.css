@@ -1,10 +1,65 @@
+/* Estilos generales para el layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .grilla-productos {
     display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    flex-wrap: wrap;
 }
-.filtro-productos{
-    
+
+.filtro-productos {
+    width: 250px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.checkbox-filtros {
+    margin-bottom: 15px;
+}
+
+/* Para que la grilla principal no se esconda detrás del sidebar */
+section.grilla-productos {
+    margin-left: 270px; /* Para acomodar el ancho de la barra */
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* Responsive: ajustamos la barra lateral en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .filtro-productos {
+        width: 100%;
+        position: relative;
+        height: auto;
+        border-right: none;
+    }
+
+    section.grilla-productos {
+        margin-left: 0;
+    }
 }

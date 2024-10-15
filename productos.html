@@ -12,23 +12,87 @@
     <script src="navbar.js"></script>
     <h1>En construcción!</h1>
 <section class="grilla-productos">
-<div class="filtro-productos">
-    <h2>Categorias</h2>
-    <ul>
-        <li>
-            <a href="promociones">PROMOCIONES</a>
-            <a href="giftcards">TARJETAS DE REGALO</a>
-            <a href="juguetes">JUGUETES</a>
-            <a href="botones">BOTONES</a>
-            <a href="manijas">MANIJAS</a>
-            <a href="hebillas">HEBILLAS</a>
-            <a href="">etc</a>
-
-
-
-        </li>
-    </ul>
-</div>
+    <div class="filtro-productos"> <!-- barrita izquierda con filtros varios -->
+        <h2>Categorías</h2>
+        <ul>
+            <li><a href="productos/promociones">PROMOCIONES</a></li>
+            <li><a href="productos/giftcards">TARJETAS DE REGALO</a></li>
+            <li><a href="productos/juguetes">JUGUETES</a></li>
+            <li><a href="productos/botones">BOTONES</a></li>
+            <li><a href="productos/manijas">MANIJAS</a></li>
+            <li><a href="productos/hebillas">HEBILLAS</a></li>
+            <li><a href="">etc</a></li>
+        </ul>
+    </div>
+    <div class="filtro-productos"> <!-- barrita izquierda, por debajo de la otra barrita -->
+        <h2>Madera</h2>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_madera" value="pino" data-filter="madera">
+                <span class="checkout__label-text">Pino</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_madera" value="cedro" data-filter="madera">
+                <span class="checkout__label-text">Cedro</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_madera" value="paraiso" data-filter="madera">
+                <span class="checkout__label-text">Paraíso</span>
+            </label>
+        </div>
+    </div>
+    <div class="filtro-productos">
+        <h2>Color o Acabado</h2>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_color" value="natural" data-filter="color">
+                <span class="checkout__label-text">Natural</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_color" value="barnizado" data-filter="color">
+                <span class="checkout__label-text">Barnizado</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_color" value="pintado" data-filter="color">
+                <span class="checkout__label-text">Pintado</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_color" value="rustico" data-filter="color">
+                <span class="checkout__label-text">Rústico</span>
+            </label>
+        </div>
+    </div>
+    <div class="filtro-productos">
+        <h2>Técnica</h2>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_tecnica" value="tallado" data-filter="tecnica">
+                <span class="checkout__label-text">Tallado a mano</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_tecnica" value="pirograbado" data-filter="tecnica">
+                <span class="checkout__label-text">Pirograbado</span>
+            </label>
+        </div>
+        <div class="checkbox-filtros">
+            <label>
+                <input type="checkbox" name="checkbox_tecnica" value="fileteado" data-filter="tecnica">
+                <span class="checkout__label-text">Fileteado</span>
+            </label>
+        </div>
+    </div>
 </section>
 </body>
 </html>
