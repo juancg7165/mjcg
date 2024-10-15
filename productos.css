@@ -6,25 +6,24 @@ body {
 
 .grilla-productos {
     display: flex;
+    flex-direction: column; /* Aseguramos que los filtros vayan uno debajo del otro */
 }
 
 .filtro-productos {
-    width: 250px;
+    width: 100%; /* Para que los filtros ocupen el ancho total del contenedor */
     padding: 15px;
     background-color: #f4f4f4;
-    border-right: 1px solid #ccc;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
+    border-bottom: 1px solid #ccc; /* Líneas divisorias entre los filtros */
+    margin-bottom: 15px; /* Espacio entre las secciones de filtro */
 }
 
+/* Encabezados de las secciones */
 h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
+/* Listas de categorías */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -39,27 +38,19 @@ ul li a {
     color: #000;
 }
 
+/* Estilos para los filtros con checkboxes */
 .checkbox-filtros {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* Para que la grilla principal no se esconda detrás del sidebar */
-section.grilla-productos {
-    margin-left: 270px; /* Para acomodar el ancho de la barra */
-    padding: 15px;
-    flex-grow: 1;
+label {
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Responsive: ajustamos la barra lateral en dispositivos pequeños */
+/* Responsive design */
 @media screen and (max-width: 768px) {
     .filtro-productos {
-        width: 100%;
-        position: relative;
-        height: auto;
-        border-right: none;
-    }
-
-    section.grilla-productos {
-        margin-left: 0;
+        width: 100%; /* Se asegura de que los filtros ocupen el ancho completo en dispositivos pequeños */
     }
 }
