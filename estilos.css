@@ -182,7 +182,6 @@ button:hover {
     display: block; /* Para que ocupe todo el ancho */
     background-color: #534b3b; /* Fondo marroncito, que el background del body tenga gradiente tamb cone sto */
     padding: 10px; /* Espaciado interno */
-    width: 100%; /* Asegura que ocupe todo el ancho */
 }
 
 .header-menu__desktop-list {
