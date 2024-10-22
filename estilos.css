@@ -208,7 +208,7 @@ button:hover {
 }
 
 .desktop-list__link:hover {
-    background-color: #0056b3; 
+    background-color: #9abde2; 
 }
 
 .nav.first {
@@ -338,6 +338,26 @@ button:hover {
 
 .nose:hover {
     background-color: #f0f0f0;
+}
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    background-color: transparent;
+}
+
+.breadcrumb-item {
+    margin-right: 5px;
+}
+
+.breadcrumb-item a {
+    color: #d9be7d; /* O el color que prefieras */
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #333; /* O el color de texto para los elementos activos */
 }
 /* @media (max-width: 768px) {
     .nav-bar ul {
