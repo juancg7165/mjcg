@@ -91,15 +91,7 @@ input[type="checkbox"] {
 }
 .contenedor-productos {
     display: flex;           /* Flexbox para colocar las secciones en línea */
-    gap: 20px;               /* Espacio entre grilla-productos y bloque-productos */
-    padding: 20px;           /* Espaciado opcional alrededor del contenedor */
+    justify-content: space-between; /* Para colocar bloque-productos a la derecha */
+    align-items: flex-start; /* Alinear las secciones verticalmente */
 }
 
-.grilla-productos {
-    width: 25%;              /* Ancho de la sección de filtros */
-    max-width: 300px;        /* Ancho máximo para mantener la barra estrecha */
-}
-
-.bloque-productos {
-    width: 75%;              /* Ancho para la sección de productos */
-}
