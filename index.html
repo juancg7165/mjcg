@@ -12,29 +12,23 @@
     <div id="navbar"></div>
 
     <!-- FIN CARGA NAVBAR -->
-    <!-- Carrusel de imágenes con transición swipe -->
     <div class="jpg-slider">
         <ul class="slider-images">
             <li><img src="bannerslogo/bannervacio.png" alt="Foto 1"></li>
             <li><img src="bannerslogo/bannervacio.png" alt="Foto 2"></li>
             <li><img src="bannerslogo/bannervacio.png" alt="Foto 3"></li>
-            <!-- Agrega más imágenes si es necesario -->
         </ul>
     </div>
 
-    <!-- Indicadores del carrusel -->
     <ul class="slider-indicator">
         <li data-index="0" class="active"></li>
         <li data-index="1"></li>
         <li data-index="2"></li>
-        <!-- Agrega más indicadores según el número de imágenes -->
     </ul>
 
-    <!-- Sección de productos -->
         <h1> Artículos más vendidos </h1>
     <section class="bloque-productos">
         
-        <!-- Aquí irán los artículos -->
         <div class="producto">
             <img src="fotosproductos/foto2.jfif" alt="BMADERA">
             <h3>Bototones en madera</h3>
@@ -90,7 +84,6 @@
                 <span class="favorito"> ❤️ </span> <!--rebuscado el corazon-->
             </div>
         </div>
-        <!-- Más productos -->
         <div class="boton-mas-productos">
             <a href="productos.html" class="nose">Más productos</a>
         </div>
@@ -101,7 +94,6 @@
                    
                
     <script>
-        // JavaScript para el slider de imágenes
         const sliderImages = document.querySelector('.slider-images');
         const sliderIndicators = document.querySelectorAll('.slider-indicator li');
         let currentIndex = 0;
@@ -122,7 +114,6 @@
             });
         });
 
-        // Swipe funcionalidad para el carrusel
         let startX = 0;
         let isSwiping = false;
 
