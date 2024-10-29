@@ -91,7 +91,6 @@ input[type="checkbox"] {
 }
 .contenedor-productos {
     display: flex;           /* Flexbox para colocar las secciones en línea */
-    justify-content: space-between; /* Para colocar bloque-productos a la derecha */
     align-items: flex-start; /* Alinear las secciones verticalmente */
 }
 

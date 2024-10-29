@@ -385,3 +385,52 @@ button:hover {
     }
 }
 */
+/* Carrito Container */
+#contenedor-carrito {
+    border: 1px solid #333;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Title */
+#contenedor-carrito h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Lista de productos */
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+/* Botón de eliminar */
+#lista-carrito button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+#lista-carrito button:hover {
+    background-color: #c0392b;
+}
