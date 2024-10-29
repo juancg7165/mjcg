@@ -26,10 +26,17 @@ function actualizarCarrito() {
 
         // Acumula el precio para el total
         totalPrecio += producto.precio;
+        
     });
+// Actualiza el total en el HTML
+document.getElementById("total-precio").textContent = totalPrecio;
 
-    // Actualiza el total en el HTML
-    document.getElementById("total-precio").textContent = totalPrecio;
+// Actualiza el título del carrito
+document.querySelector("h2").textContent = `Carrito (${carrito.length})`;
+
+// Muestra/oculta el contenido del carrito
+document.getElementById("carrito-contenido").style.display = carrito.length > 0 ? "block" : "none";
+
 }
 
 // Función para eliminar un producto del carrito
@@ -39,6 +46,9 @@ function eliminarDelCarrito(index) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
 }
-
+document.querySelector("h2").onclick = function() {
+    let contenido = document.getElementById("carrito-contenido");
+    contenido.style.display = contenido.style.display === "none" ? "block" : "none";
+}
 // Llama a actualizarCarrito al cargar la página para mostrar los elementos guardados
 window.onload = actualizarCarrito;
