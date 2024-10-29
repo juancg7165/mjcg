@@ -11,6 +11,7 @@
 <body>
     <div id="navbar"></div>
     <script src="../navbar2.js"></script>
+    <div id="contenedor-carrito"></div>
     <div class="contenedor-productos">
     <section class="grilla-productos">
         <nav aria-label="breadcrumb">
@@ -110,7 +111,7 @@
         <h3>Botones marmolados</h3>
         <p>Precio: $1200 por docena</p>
         <div class="acciones">
-            <button>+ Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Botones marmolados', 1200)">+ Agregar al carrito</button>
             <span class="favorito"> ❤️ </span> <!--rebuscado el corazon-->
         </div>
     </div>
@@ -119,11 +120,22 @@
         <h3>Botones varios</h3>
         <p>Precio: $1200 por docena</p>
         <div class="acciones">
-            <button>+ Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Botones varios', 1200)">+ Agregar al carrito</button>
             <span class="favorito"> ❤️ </span> <!--rebuscado el corazon-->
         </div>
     </div>
     </section>
     </div>
+    <script>
+        // Cargar el contenido del carrito HTML
+        fetch('../carrito.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenedor-carrito').innerHTML = data;
+                // Después de cargar el HTML, se necesita inicializar el carrito
+                actualizarCarrito();
+            });
+    </script>
+    <script src="../carrito.js"></script> <!-- Asegúrate de incluir este archivo al final -->
 </body>
 </html>
