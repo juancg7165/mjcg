@@ -416,7 +416,6 @@ button:hover {
 
 #total-precio {
     font-weight: bold;
-    font-size: 1.1em; /* Tamaño un poco más grande */
     margin-top: 10px;
     text-align: center; /* Centra el texto */
 }
@@ -454,6 +453,7 @@ button:hover {
 #lista-compra {
     list-style-type: none;
     padding: 0;
+    color: #ffffff;
 }
 
 #lista-compra li {
