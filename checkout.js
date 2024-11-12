@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     totalCompra.textContent = totalPrecio;
 
     finalizarCompraBtn.addEventListener("click", function() {
-        const urlWhatsApp = `https://wa.me/?text=${encodeURIComponent(mensajeCompra + " Total: $" + totalPrecio)}`;
+        const urlWhatsApp = `https://wa.me/5491144209603?text=${encodeURIComponent(mensajeCompra + " Total: $" + totalPrecio)}`;
         window.location.href = urlWhatsApp;
     });
 });

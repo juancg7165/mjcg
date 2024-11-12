@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    flex: 1;
+    width: 30%;
 }
 
 .filtro-productos {

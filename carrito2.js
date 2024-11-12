@@ -26,7 +26,7 @@ function actualizarCarrito() {
 
     let verCompraBtn = document.getElementById("ver-compra-btn");
     verCompraBtn.style.display = carrito.length > 0 ? "block" : "none";
-    verCompraBtn.onclick = () => window.location.href = "../compra.html";
+    verCompraBtn.onclick = () => window.location.href = "compra.html";
 
     document.getElementById("carrito-contenedor").style.display = carrito.length > 0 ? "block" : "none";
 
