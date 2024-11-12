@@ -286,6 +286,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    width:80%;
 }
 
 .producto {
@@ -387,12 +388,17 @@ button:hover {
 */
 /* Carrito Container */
 #contenedor-carrito {
+    display: flex;
+    position: fixed;
     border: 1px solid #333;
     padding: 20px;
     max-width: 300px;
     margin: 20px auto;
     background-color: #f9f9f9;
     border-radius: 8px;
+    top: 82%;
+    left: 30%;
+    
 }
 
 /* Title */
