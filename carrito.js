@@ -71,6 +71,11 @@ function actualizarCarrito() {
     let verCompraBtn = document.getElementById("ver-compra-btn");
     verCompraBtn.style.display = carrito.length > 0 ? "block" : "none";
     verCompraBtn.onclick = () => window.location.href = "../compra.html";
+    document.getElementById("carrito-contenedor").style.display = carrito.length > 0 ? "block" : "none";
+
+    document.querySelector("h2").textContent = carrito.length === 1 ? 
+        `Carrito (1) - ${carrito[0].nombre} - $${carrito[0].precio}` :
+        `Carrito (${carrito.length}) - (...)`;
 }
 
 // Función para eliminar artículo del carrito
@@ -80,7 +85,10 @@ function eliminarDelCarrito(index) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
 }
-
+document.querySelector("h2").onclick = function() {
+    let contenido = document.getElementById("carrito-contenedor");
+    contenido.style.display = contenido.style.display === "none" ? "block" : "none";
+};
 document.addEventListener("DOMContentLoaded", actualizarCarrito);
 
 window.onload = actualizarCarrito;
