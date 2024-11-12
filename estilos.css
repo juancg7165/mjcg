@@ -461,6 +461,8 @@ button:hover {
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    background-color: #534b3b;
+    border-radius: 10px;
 }
 
 #lista-compra img {
@@ -477,7 +479,7 @@ button:hover {
 
 #finalizar-compra-btn {
     margin-top: 20px;
-    background-color: #534b3b;
+    background-color: #227711;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -487,4 +489,11 @@ button:hover {
 
 #finalizar-compra-btn:hover {
     background-color: #3b3a30;
+}
+#resumen-compra
+{
+padding: 15px;
+background-color: #f4f4f4;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
