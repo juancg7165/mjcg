@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     totalCompra.textContent = totalPrecio;
 
     finalizarCompraBtn.addEventListener("click", function() {
+        localStorage.removeItem("carrito"); //limpiar el carrito previo a mandarme a wsp
         const urlWhatsApp = `https://wa.me/5491144209603?text=${encodeURIComponent(mensajeCompra + " Total: $" + totalPrecio)}`;
         window.location.href = urlWhatsApp;
     });
