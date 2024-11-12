@@ -88,8 +88,7 @@ button:hover {
 }
 
 .header-logo__image {
-    max-width: 150px;
-    height: auto;
+    width: 100%;
 }
 
 /* User menu styles */
