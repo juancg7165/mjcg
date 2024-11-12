@@ -38,7 +38,7 @@ button:hover {
     text-align: center;
     display: block; /* Esto hará que el fondo se ajuste al texto */
     color: #fff; /* Cambia el color del texto si es necesario */
-    border-radius: 90px; /* (Opcional) Agrega esquinas redondeadas */
+    padding:1px;
 }
 
 
@@ -84,7 +84,6 @@ button:hover {
 
 /* Logo styles */
 .header-logo {
-    flex: 0; /* El logo no debe estirarse */
 }
 
 .header-logo__image {
