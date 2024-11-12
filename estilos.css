@@ -387,9 +387,11 @@ button:hover {
 }
 */
 #carrito-contenedor {
+    border-radius: 20px;
+    left: 28%;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 45%;
     max-height: 200px; /* Limita la altura del carrito */
     overflow-y: auto; /* Habilita el scroll vertical */
     background-color: #f9f9f9;
@@ -399,22 +401,52 @@ button:hover {
     z-index: 1000;
 }
 
+.lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd; /* Bordes sutiles entre items */
+}
+
+.lista-carrito li:last-child {
+    border-bottom: none; /* Elimina borde del último elemento */
+}
+
 #total-precio {
     font-weight: bold;
+    font-size: 1.1em; /* Tamaño un poco más grande */
     margin-top: 10px;
+    text-align: center; /* Centra el texto */
+}
+
+button {
+    background-color: #cfcfcf;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
 }
 
 #ver-compra-btn {
     margin-top: 10px;
-    background-color: #007bff;
+    background-color: #534b3b;
     color: #fff;
-    padding: 5px 10px;
     border: none;
     cursor: pointer;
     border-radius: 3px;
+    width: 100%; /* Centra el botón */
+    padding: 8px;
 }
 
 #ver-compra-btn:hover {
     background-color: #0056b3;
 }
-
+.lista-carrito button {
+    margin-left: 10px;
+    margin-right: 5px;
+}
