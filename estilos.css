@@ -451,3 +451,40 @@ button:hover {
     margin-left: 10px;
     margin-right: 5px;
 }
+#lista-compra {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-compra li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#lista-compra img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#total-compra {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#finalizar-compra-btn {
+    margin-top: 20px;
+    background-color: #534b3b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#finalizar-compra-btn:hover {
+    background-color: #3b3a30;
+}
