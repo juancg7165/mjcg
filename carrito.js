@@ -19,9 +19,10 @@ function agregarAlCarrito(nombreProducto, precioProducto, imagenProducto) {
 function actualizarCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let listaCarrito = document.getElementById("lista-carrito");
+    let totalPrecio = 0;
     listaCarrito.innerHTML = ""; // Limpiar lista
 
-    let totalPrecio = 0;
+    
 
     carrito.forEach((producto, index) => {
         let item = document.createElement("li");
@@ -81,3 +82,5 @@ function eliminarDelCarrito(index) {
 }
 
 document.addEventListener("DOMContentLoaded", actualizarCarrito);
+
+window.onload = actualizarCarrito;
