@@ -10,24 +10,26 @@ document.addEventListener("DOMContentLoaded", function() {
     carrito.forEach(producto => {
         // Crear elementos para el nombre, precio y foto del producto
         let item = document.createElement("li");
+    
         let img = document.createElement("img");
-        img.src = producto.imagen; // Asegúrate de almacenar la URL de la imagen en el carrito
-
+        img.src = producto.imagen; // URL de la imagen almacenada en el carrito
+    
         let nombre = document.createElement("span");
         nombre.textContent = producto.nombre;
-
+    
         let precio = document.createElement("span");
         precio.textContent = ` - $${producto.precio}`;
-
+    
         // Añadir imagen, nombre y precio al item
         item.appendChild(img);
         item.appendChild(nombre);
         item.appendChild(precio);
         listaCompra.appendChild(item);
-
+    
         totalPrecio += producto.precio;
         mensajeCompra += ` ${producto.nombre} por $${producto.precio},`;
     });
+    
 
     totalCompra.textContent = totalPrecio;
 

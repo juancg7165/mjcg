@@ -1,9 +1,22 @@
-function agregarAlCarrito(nombreProducto, precioProducto) {
+function agregarAlCarrito(nombreProducto, precioProducto, imagenProducto) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    carrito.push({ nombre: nombreProducto, precio: precioProducto });
+
+    // Verificamos si el artículo ya existe en el carrito
+    let productoExistente = carrito.find(item => item.nombre === nombreProducto);
+
+    if (productoExistente) {
+        // Si existe, incrementamos la cantidad
+        productoExistente.cantidad += 1;
+    } else {
+        // Si no existe, lo agregamos con una cantidad de 1
+        carrito.push({ nombre: nombreProducto, precio: precioProducto, cantidad: 1, imagen: imagenProducto });
+    }
+
+    // Guardamos el carrito actualizado en localStorage
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
 }
+
 
 function actualizarCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
