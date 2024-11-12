@@ -1,15 +1,15 @@
-function agregarAlCarrito(nombreProducto, precioProducto) {
+function agregarAlCarrito(nombreProducto, precioProducto, imagenProducto) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     
-    // Verificamos si el artículo ya existe en el carrito
-    let productoExistente = carrito.find(item => item.nombre === nombreProducto);
+    // Verificamos si el artículo ya existe en el carrito (usamos un criterio único como el nombre + imagen)
+    let productoExistente = carrito.find(item => item.nombre === nombreProducto && item.imagen === imagenProducto);
 
     if (productoExistente) {
-        // Si existe, incrementamos la cantidad y actualizamos el precio total
+        // Si existe, incrementamos la cantidad
         productoExistente.cantidad += 1;
     } else {
         // Si no existe, lo agregamos con una cantidad de 1
-        carrito.push({ nombre: nombreProducto, precio: precioProducto, cantidad: 1 });
+        carrito.push({ nombre: nombreProducto, precio: precioProducto, cantidad: 1, imagen: imagenProducto });
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -24,9 +24,14 @@ function actualizarCarrito() {
 
     carrito.forEach((producto, index) => {
         let item = document.createElement("li");
-        
+
+        // Crear un elemento de imagen
+        let img = document.createElement("img");
+        img.src = producto.imagen; // Asigna la URL de la imagen
+
         // Mostrar nombre y cantidad del artículo
-        item.textContent = `${producto.nombre} (${producto.cantidad}) - $${producto.precio * producto.cantidad}`;
+        item.appendChild(img); // Añadir la imagen
+        item.appendChild(document.createTextNode(`${producto.nombre} (${producto.cantidad}) - $${producto.precio * producto.cantidad}`));
 
         // Botón de eliminar
         let botonEliminar = document.createElement("button");
