@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nombre.textContent = producto.nombre;
     
         let precio = document.createElement("span");
-        precio.textContent = ` - $${producto.precio}`;
+        precio.textContent = ` - $${producto.precio} x ${producto.cantidad} = $${producto.precio * producto.cantidad}`;
     
         // Añadir imagen, nombre y precio al item
         item.appendChild(img);
@@ -26,12 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
         item.appendChild(precio);
         listaCompra.appendChild(item);
     
-        totalPrecio += producto.precio;
-        mensajeCompra += ` ${producto.nombre} por $${producto.precio},`;
+        totalPrecio += producto.precio * producto.cantidad;  // Calcular total según cantidad
+        mensajeCompra += ` ${producto.nombre} (x${producto.cantidad}) por $${producto.precio * producto.cantidad},`;
     });
     
-
-    totalCompra.textContent = totalPrecio;
+    totalCompra.textContent = `Total: $${totalPrecio}`;
 
     finalizarCompraBtn.addEventListener("click", function() {
         localStorage.removeItem("carrito"); //limpiar el carrito previo a mandarme a wsp
