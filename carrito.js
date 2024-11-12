@@ -8,45 +8,31 @@ function agregarAlCarrito(nombreProducto, precioProducto) {
 function actualizarCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let listaCarrito = document.getElementById("lista-carrito");
-    let totalPrecio = 0; 
+    let totalPrecio = 0;
     listaCarrito.innerHTML = ""; 
 
-    if (carrito.length === 1) {
-        // Mostrar el único artículo en el carrito
-        let producto = carrito[0];
+    carrito.forEach((producto, index) => {
         let item = document.createElement("li");
         item.textContent = `${producto.nombre} - $${producto.precio}`;
-        
         let botonEliminar = document.createElement("button");
         botonEliminar.textContent = "Eliminar";
-        botonEliminar.onclick = () => eliminarDelCarrito(0);
+        botonEliminar.onclick = () => eliminarDelCarrito(index);
         item.appendChild(botonEliminar);
-        
         listaCarrito.appendChild(item);
-    } else if (carrito.length > 1) {
-        // Mostrar "..." cuando hay más de un artículo
-        let item = document.createElement("li");
-        item.textContent = "(...)";
-        listaCarrito.appendChild(item);
-    }
-
-    // Añadir el botón "Ver compra" en todos los casos cuando el carrito no está vacío
-    if (carrito.length > 0) {
-        let botonVerCompra = document.createElement("button");
-        botonVerCompra.textContent = "Ver compra";
-        botonVerCompra.onclick = () => window.location.href = "compra.html";
-        listaCarrito.appendChild(botonVerCompra);
-    }
-
-    // Calcular y mostrar el total del carrito
-    carrito.forEach(producto => {
         totalPrecio += producto.precio;
     });
-    document.getElementById("total-precio").textContent = totalPrecio;
 
-    // Actualizar el título del carrito y la visibilidad
-    document.querySelector("h2").textContent = `Carrito (${carrito.length})`;
-    document.getElementById("carrito-contenido").style.display = carrito.length > 0 ? "block" : "none";
+    document.getElementById("total-precio").textContent = `Total: $${totalPrecio}`;
+
+    let verCompraBtn = document.getElementById("ver-compra-btn");
+    verCompraBtn.style.display = carrito.length > 0 ? "block" : "none";
+    verCompraBtn.onclick = () => window.location.href = "compra.html";
+
+    document.getElementById("carrito-contenedor").style.display = carrito.length > 0 ? "block" : "none";
+
+    document.querySelector("h2").textContent = carrito.length === 1 ? 
+        `Carrito (1) - ${carrito[0].nombre} - $${carrito[0].precio}` :
+        `Carrito (${carrito.length}) - (...)`;
 }
 
 function eliminarDelCarrito(index) {
@@ -57,8 +43,8 @@ function eliminarDelCarrito(index) {
 }
 
 document.querySelector("h2").onclick = function() {
-    let contenido = document.getElementById("carrito-contenido");
+    let contenido = document.getElementById("carrito-contenedor");
     contenido.style.display = contenido.style.display === "none" ? "block" : "none";
-}
+};
 
 window.onload = actualizarCarrito;
