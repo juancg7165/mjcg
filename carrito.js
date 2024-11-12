@@ -72,5 +72,5 @@ function eliminarDelCarrito(index) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
 }
-
+document.addEventListener("DOMContentLoaded", actualizarCarrito);
 window.onload = actualizarCarrito;
