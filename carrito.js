@@ -16,8 +16,9 @@ function agregarAlCarrito(nombreProducto, precioProducto, imagenProducto) {
 function actualizarCarrito() {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let listaCarrito = document.getElementById("lista-carrito");
-    let totalPrecio = 0;
     listaCarrito.innerHTML = "";
+
+    let totalPrecio = 0;
 
     carrito.forEach((producto, index) => {
         let item = document.createElement("li");
@@ -27,15 +28,10 @@ function actualizarCarrito() {
             ${producto.nombre} - $${producto.precio} x ${producto.cantidad} = $${producto.precio * producto.cantidad}
             <button onclick="sumarCantidad(${index})">+</button>
             <button onclick="restarCantidad(${index})">-</button>
+            <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
         `;
 
-        let botonEliminar = document.createElement("button");
-        botonEliminar.textContent = "Eliminar";
-        botonEliminar.onclick = () => eliminarDelCarrito(index);
-        item.appendChild(botonEliminar);
-
         listaCarrito.appendChild(item);
-
         totalPrecio += producto.precio * producto.cantidad;
     });
 
@@ -43,9 +39,11 @@ function actualizarCarrito() {
     let verCompraBtn = document.getElementById("ver-compra-btn");
     verCompraBtn.style.display = carrito.length > 0 ? "block" : "none";
     verCompraBtn.onclick = () => window.location.href = "../compra.html";
-    
-    document.getElementById("ver-compra-btn").style.display = carrito.length > 0 ? "block" : "none";
     document.getElementById("carrito-contenedor").style.display = carrito.length > 0 ? "block" : "none";
+
+    document.querySelector("h2").textContent = carrito.length === 1 ? 
+        `Carrito (1) - ${carrito[0].nombre} - $${carrito[0].precio}` :
+        `Carrito (${carrito.length}) - (...)`;
 }
 
 function sumarCantidad(index) {
@@ -72,5 +70,11 @@ function eliminarDelCarrito(index) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarCarrito();
 }
+
+document.querySelector("h2").onclick = function() {
+    let contenido = document.getElementById("carrito-contenedor");
+    contenido.style.display = contenido.style.display === "none" ? "block" : "none";
+};
+
 document.addEventListener("DOMContentLoaded", actualizarCarrito);
 window.onload = actualizarCarrito;
