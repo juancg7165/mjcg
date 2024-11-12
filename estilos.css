@@ -213,7 +213,7 @@ button:hover {
 .nav.first {
     display: none; 
     position: absolute; 
-    background-color: black; 
+    background-color: #534b3b; 
     z-index: 10; 
 }
 
