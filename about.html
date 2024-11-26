@@ -6,22 +6,66 @@
     <title>Acerca de - mjcg</title>
     <link rel="stylesheet" href="estilos.css">
     <script src="navbar.js" defer></script> <!-- Usar defer -->
+    <style>
+        /* Contenedor principal */
+        .about-container {
+            font-family: 'Arial', sans-serif;
+            color: #333333;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título principal */
+        .about-container h1 {
+            color: #d9be7d; /* Color destacado */
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Párrafos */
+        .about-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Destacado */
+        .about-container .highlight {
+            background-color: #fdf7e3;
+            padding: 10px;
+            border-left: 5px solid #d9be7d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <!-- CARGA DE NAVBAR -->
     <div id="navbar"></div>
     <!-- FIN CARGA NAVBAR -->
-    <!-- <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="about.html">Acerca de</a></li>
-        </ol> -->
+
+    <!-- Contenido principal -->
+    <div class="about-container">
         <h1>Mi nombre es Miguel Juan Cruz Gimenez</h1>
-        <p>Soy estudiante de la carrera Analista de sistemas informáticos. Este proyecto fue realizado para la materia Practicas Profesionales III, con la intención de servir como sitio web funcional para la venta (desde mi punto de vista) de botones y otros artículos elaborados en madera, con sus detalles </p>
-        <p>Me dedico a hacer carteles desde el 2017, y espero el día de mañana poder empezar a dibujar y pintar, así como también esculpir. </p>
-        <footer>
-            <div id="footer"></div>
+        <p>
+            Soy estudiante de la carrera Analista de Sistemas Informáticos. Este proyecto fue realizado para la materia <strong>Prácticas Profesionales III</strong>, con la intención de servir como sitio web funcional para la venta (desde mi punto de vista) de botones y otros artículos elaborados en madera, con sus detalles.
+        </p>
+        <div class="highlight">
+            <strong>Pasión por la madera:</strong> 
+            Me dedico a hacer carteles desde el 2017, y espero el día de mañana poder contar con tiempo para aprender a dibujar, pintar y también esculpir.
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer"></div>
         <script src="footer.js"></script>
-        </footer>
-    </body>
+    </footer>
+</body>
 </html>
