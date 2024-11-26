@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo Personalizado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script src="../navbar2.js"></script>
+    <div id="contenedor-carrito"></div>
+  
+    <form id="form-dibujo">
+        <label for="alto">Alto (cm):</label>
+        <input type="number" id="alto" name="alto" required>
+
+        <label for="ancho">Ancho (cm):</label>
+        <input type="number" id="ancho" name="ancho" required>
+
+        <label for="diseño">Diseño:</label>
+        <select id="diseño" name="diseño" required>
+            <option value="ovalado">Ovalado</option>
+            <option value="redondo">Redondo</option>
+            <option value="rectangular">Rectangular</option>
+        </select>
+
+        <label for="dibujo">Tipo de Dibujo:</label>
+        <select id="dibujo" name="dibujo" required>
+            <option value="true">A color</option>
+            <option value="false">Blanco y negro</option>
+        </select>
+
+        <label for="detalle">Detalles adicionales:</label>
+        <textarea id="detalle" name="detalle" placeholder="Escribe cualquier detalle extra..."></textarea>
+
+        <button type="submit">Confirmar Pedido</button>
+    </form>
+
+    <script>
+        document.getElementById('form-dibujo').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pedido = {
+                tipo: 'dibujo',
+                alto: document.getElementById('alto').value,
+                ancho: document.getElementById('ancho').value,
+                diseño: document.getElementById('diseño').value,
+                detalle: document.getElementById('detalle').value,
+                dibujo: document.getElementById('dibujo').value === 'true',
+            };
+
+            // Guardar en localStorage
+            localStorage.setItem('pedido', JSON.stringify(pedido));
+
+            // Redirigir a la página de confirmación
+            window.location.href = 'compracustom.html';
+        });
+    </script>
+</body>
+</html>

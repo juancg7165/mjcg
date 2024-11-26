@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Pedido</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script src="../navbar2.js"></script>
+    <div id="contenedor-carrito"></div>
+
+    <main>
+        <section id="detalle-pedido">
+            <!-- Aquí se mostrarán los detalles del pedido -->
+        </section>
+
+        <div id="botones-acciones">
+            <button id="presupuestar">Presupuestar</button>
+            <button id="editar">Volver a Editar</button>
+        </div>
+    </main>
+
+    <script>
+        // Recuperar el pedido del localStorage
+        const pedido = JSON.parse(localStorage.getItem('pedido'));
+
+        // Elemento donde mostrar los detalles
+        const detallePedido = document.getElementById('detalle-pedido');
+
+        // Mostrar los detalles del pedido
+        if (pedido) {
+            detallePedido.innerHTML = `
+                <p><strong>Tipo de Pedido:</strong> ${pedido.tipo}</p>
+                <p><strong>Alto:</strong> ${pedido.alto} cm</p>
+                <p><strong>Ancho:</strong> ${pedido.ancho} cm</p>
+                <p><strong>Diseño:</strong> ${pedido.diseño}</p>
+                ${pedido.pintado !== undefined ? `<p><strong>Acabado:</strong> ${pedido.pintado ? 'Pintado' : 'Barnizado'}</p>` : ''}
+                ${pedido.dibujo !== undefined ? `<p><strong>Tipo de Dibujo:</strong> ${pedido.dibujo ? 'A color' : 'Blanco y negro'}</p>` : ''}
+                <p><strong>Detalles Adicionales:</strong> ${pedido.detalle}</p>
+            `;
+        } else {
+            detallePedido.innerHTML = `<p>No se encontraron detalles del pedido. Vuelve a intentarlo.</p>`;
+        }
+
+        // Redirigir a WhatsApp con el mensaje
+        document.getElementById('presupuestar').addEventListener('click', function() {
+            if (pedido) {
+                let mensaje = `Hola, quisiera hacer un pedido personalizado. Quiero ${pedido.tipo}, de ${pedido.alto} por ${pedido.ancho}, con forma ${pedido.diseño}.`;
+
+                // Campos específicos según el tipo de pedido
+                if (pedido.tipo === 'tallado') {
+                    mensaje += ` Acabado: ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
+                } else if (pedido.tipo === 'dibujo') {
+                    mensaje += ` Tipo de dibujo: ${pedido.dibujo ? 'A color' : 'Blanco y negro'}.`;
+                }
+
+                mensaje += ` Detalles adicionales: ${pedido.detalle}`;
+                window.location.href = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
+            } else {
+                alert('No hay detalles del pedido para presupuestar.');
+            }
+        });
+
+        // Botón para volver a editar
+        document.getElementById('editar').addEventListener('click', function() {
+            history.back();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escultura Personalizada</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script src="../navbar2.js"></script>
+    <div id="contenedor-carrito"></div>
+    
+    <form id="form-escultura">
+        <label for="alto">Alto (cm):</label>
+        <input type="number" id="alto" name="alto" required>
+
+        <label for="ancho">Ancho (cm):</label>
+        <input type="number" id="ancho" name="ancho" required>
+
+        <label for="diseño">Diseño:</label>
+        <select id="diseño" name="diseño" required>
+            <option value="ovalado">Ovalado</option>
+            <option value="redondo">Redondo</option>
+            <option value="rectangular">Rectangular</option>
+        </select>
+
+        <label for="detalle">Detalles adicionales:</label>
+        <textarea id="detalle" name="detalle" placeholder="Escribe cualquier detalle extra..."></textarea>
+
+        <button type="submit">Confirmar Pedido</button>
+    </form>
+
+    <script>
+        document.getElementById('form-escultura').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pedido = {
+                tipo: 'escultura',
+                alto: document.getElementById('alto').value,
+                ancho: document.getElementById('ancho').value,
+                diseño: document.getElementById('diseño').value,
+                detalle: document.getElementById('detalle').value,
+            };
+
+            // Guardar en localStorage
+            localStorage.setItem('pedido', JSON.stringify(pedido));
+
+            // Redirigir a la página de confirmación
+            window.location.href = 'compracustom.html';
+        });
+    </script>
+</body>
+</html>
