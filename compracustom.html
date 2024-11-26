@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="navbar"></div>
-    <script src="../navbar2.js"></script>
+    <script src="navbar.js"></script>
     <div id="contenedor-carrito"></div>
 
     <main>
@@ -52,9 +52,10 @@
                 // Campos específicos según el tipo de pedido
                 if (pedido.tipo === 'tallado') {
                     mensaje += ` Acabado: ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
-                } else if (pedido.tipo === 'dibujo') {
-                    mensaje += ` Tipo de dibujo: ${pedido.dibujo ? 'A color' : 'Blanco y negro'}.`;
-                }
+                } if (pedido.tipo === 'dibujo') {
+    mensaje += ` Tamaño de la hoja: ${pedido.tamanoHoja}, tipo de dibujo: ${pedido.dibujo}, detalle adicional: ${pedido.detalle}.`;
+}
+
 
                 mensaje += ` Detalles adicionales: ${pedido.detalle}`;
                 window.location.href = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;

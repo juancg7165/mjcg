@@ -3,57 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibujo Personalizado</title>
+    <title>Pedido Personalizado - Dibujos</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div id="navbar"></div>
-    <script src="../navbar2.js"></script>
-    <div id="contenedor-carrito"></div>
-  
-    <form id="form-dibujo">
-        <label for="alto">Alto (cm):</label>
-        <input type="number" id="alto" name="alto" required>
+    <header>
+        <h1>Pedido Personalizado - Dibujos</h1>
+    </header>
+    
+    <main>
+        <form id="form-pedido">
+            <label for="tamano-hoja">Tamaño de la hoja:</label>
+            <select id="tamano-hoja" name="tamano-hoja" required>
+                <option value="A5">A5 (148 x 210 mm)</option>
+                <option value="A4">A4 (210 x 297 mm)</option>
+                <option value="A3">A3 (297 x 420 mm)</option>
+                <option value="Canson Nº6">Canson Nº6</option>
+            </select>
 
-        <label for="ancho">Ancho (cm):</label>
-        <input type="number" id="ancho" name="ancho" required>
+            <label for="tipo-dibujo">Estilo del dibujo:</label>
+            <select id="tipo-dibujo" name="tipo-dibujo" required>
+                <option value="blanco y negro">Blanco y negro</option>
+                <option value="a color">A color</option>
+                <option value="acuarela">Acuarela</option>
+            </select>
 
-        <label for="diseño">Diseño:</label>
-        <select id="diseño" name="diseño" required>
-            <option value="ovalado">Ovalado</option>
-            <option value="redondo">Redondo</option>
-            <option value="rectangular">Rectangular</option>
-        </select>
+            <label for="detalle">Detalles adicionales:</label>
+            <textarea id="detalle" name="detalle" rows="4" placeholder="Describe lo que te gustaría que dibuje..." required></textarea>
 
-        <label for="dibujo">Tipo de Dibujo:</label>
-        <select id="dibujo" name="dibujo" required>
-            <option value="true">A color</option>
-            <option value="false">Blanco y negro</option>
-        </select>
-
-        <label for="detalle">Detalles adicionales:</label>
-        <textarea id="detalle" name="detalle" placeholder="Escribe cualquier detalle extra..."></textarea>
-
-        <button type="submit">Confirmar Pedido</button>
-    </form>
+            <button type="submit">Confirmar</button>
+        </form>
+    </main>
 
     <script>
-        document.getElementById('form-dibujo').addEventListener('submit', function(event) {
+        document.getElementById('form-pedido').addEventListener('submit', function(event) {
             event.preventDefault();
 
+            const tipo = 'dibujo';
+            const tamanoHoja = document.getElementById('tamano-hoja').value;
+            const tipoDibujo = document.getElementById('tipo-dibujo').value;
+            const detalle = document.getElementById('detalle').value;
+
             const pedido = {
-                tipo: 'dibujo',
-                alto: document.getElementById('alto').value,
-                ancho: document.getElementById('ancho').value,
-                diseño: document.getElementById('diseño').value,
-                detalle: document.getElementById('detalle').value,
-                dibujo: document.getElementById('dibujo').value === 'true',
+                tipo,
+                tamanoHoja,
+                tipoDibujo,
+                detalle
             };
 
-            // Guardar en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
-
-            // Redirigir a la página de confirmación
             window.location.href = 'compracustom.html';
         });
     </script>
