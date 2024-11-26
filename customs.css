@@ -1,0 +1,115 @@
+/* Estilos específicos para la página customs.html */
+
+/* Body - Solo para esta página, si hay conflicto con estilos.css */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Purple Purse', sans-serif;
+}
+
+/* Estilo para los enlaces de las tarjetas */
+a.group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a.group:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Título y subtítulo */
+a.group h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+a.group h2 {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Descripción pequeña debajo de los títulos */
+a.group .font-purse {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Ribbon de etiqueta (new) */
+a.group .absolute {
+    position: absolute;
+    top: -0.5rem;
+    left: -1rem;
+    transform: rotate(-12deg);
+    width: 115px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/orange_ribbon.webp');
+    background-size: cover;
+    filter: grayscale(35%) hue-rotate(-5deg);
+    font-size: 0.75rem;
+    color: gray;
+    text-transform: uppercase;
+}
+
+/* Botón "Más" */
+a.group .more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+a.group .more-btn:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+a.group .more-btn svg {
+    margin-left: 0.25rem;
+    transition: transform 0.3s ease;
+}
+
+a.group:hover .more-btn svg {
+    transform: translateX(0.25rem);
+}
+
+/* Estilo para la descripción del botón */
+a.group .text-shadow {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+a.group .mt-1 {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+a.group:hover .mt-1 {
+    color: white;
+}

@@ -46,9 +46,9 @@ button:hover {
 /* Estilos para el encabezado */
 /* Header container */
 .header {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos */
-    align-items: center; /* Centra verticalmente */
+    /* display: flex; POR AHORA ME DAS QUILOMBO ASI QUE TE SACO LAGARTO */
+    justify-content: space-between; 
+    align-items: center; /* ALPEDO? NO LO  SABREMOS HASTA Q SE ROMPA TODO */
     min-height: 175px;
 }
 
