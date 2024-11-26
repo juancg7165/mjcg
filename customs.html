@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos personalizados - mjcg</title>
     <link rel="stylesheet" href="estilos.css">
-<link rel="stylesheet" href="customs.css">
+    <link rel="stylesheet" href="customs.css">
 </head>
 <body>
     <!-- CARGA DE NAVBAR -->
@@ -18,36 +18,42 @@
             <li class="breadcrumb-item"><a href="customs.html">Pedidos personalizados</a></li>
         </ol>
     </nav>
-    <a class="group relative flex w-56 flex-col items-center justify-center border border-white/10 py-3 text-white transition-all hover:border-white/30 hover:bg-slate-400/5" href="https://l2epic.fail/longterm">
-          
-        <div class="flex justify-center font-purse text-xs font-normal text-white/40 drop-shadow-md">Barnizados o Pintados</div>
-        <h1 class="mt-2 flex justify-center font-purse text-2xl drop-shadow-md">Carteles Tallados</h1>
-        <h2 class="mt-0 flex justify-center font-purse text-xl text-white/80 drop-shadow-md">Hasta 400x200cm</h2>
-        <div class="text-shadow text-md my-2 w-full py-2 text-center font-purse bg-slate-300/20">Pedí tu Cotización</div>
-        <div class="mt-1 font-purse text-sm text-white/40 transition-all group-hover:text-white/100">
-            <span>Más</span>
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="ml-1 inline-block -translate-x-1 text-xl transition-all group-hover:translate-x-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-            </svg>
-        </div>
-    </a>
-    
-    <a class="group relative flex w-56 flex-col items-center justify-center border border-white/10 py-3 text-white transition-all hover:border-white/30 hover:bg-slate-400/5" href="https://l2epic.fail/seasonal">
-        <span style="background-image:url(/orange_ribbon.webp);width:115px;height:38px;filter:grayscale(35%) hue-rotate(-5deg)" class="absolute -left-6 -top-2 -rotate-12 pt-3 text-center font-purse text-gray-700">new</span>
-        <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:60px;height:35px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative">
-            <img alt="Interlude logo" src="./images/interlude_logo2.jpg" decoding="async" data-nimg="fixed" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:100%;height:100%">
-        </span>
-        <div class="flex justify-center font-purse text-xs font-normal text-white/40 drop-shadow-md">A color / ByN</div>
-        <h1 class="mt-2 flex justify-center font-purse text-2xl drop-shadow-md">Dibujos</h1>
-        <h2 class="mt-0 flex justify-center font-purse text-xl text-white/80 drop-shadow-md">De hasta 40cm</h2>
-        <div class="text-shadow text-md my-2 w-full py-2 text-center font-purse bg-slate-300/20">Pedí tu Cotización</div>
-        <div class="mt-1 font-purse text-sm text-white/40 transition-all group-hover:text-white/100">
-            <span>Más</span>
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="ml-1 inline-block -translate-x-1 text-xl transition-all group-hover:translate-x-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-            </svg>
-        </div>
-    </a>
-    
+
+    <div class="productos-container">
+        <a class="group" href="https://l2epic.fail/longterm">
+            <div class="absolute">new</div>
+            <h1>Carteles Tallados</h1>
+            <h2>Hasta 400x200cm</h2>
+            <div class="font-purse">Barnizados o Pintados</div>
+            <div class="more-btn">Pedí tu Cotización</div>
+        </a>
+
+        <a class="group" href="https://l2epic.fail/seasonal">
+            <div class="absolute">new</div>
+            <h1>Dibujos</h1>
+            <h2>De hasta 40cm</h2>
+            <div class="font-purse">A color / ByN</div>
+            <div class="more-btn">Pedí tu Cotización</div>
+        </a>
+
+        <!-- Nueva tarjeta para Esculturas -->
+        <a class="group" href="https://l2epic.fail/esculturas">
+            <div class="absolute">new</div>
+            <h1>Esculturas Personalizadas</h1>
+            <h2>Diseños Únicos</h2>
+            <div class="font-purse">Esculturas en Madera</div>
+            <div class="more-btn">Pedí tu Cotización</div>
+        </a>
+
+        <!-- Nueva tarjeta para Tallados -->
+        <a class="group" href="https://l2epic.fail/tallados">
+            <div class="absolute">new</div>
+            <h1>Tallados en Madera</h1>
+            <h2>Personalizados a Pedido</h2>
+            <div class="font-purse">Tallados a Mano</div>
+            <div class="more-btn">Pedí tu Cotización</div>
+        </a>
+    </div>
+
 </body>
 </html>
