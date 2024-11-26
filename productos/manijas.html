@@ -169,7 +169,6 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('contenedor-carrito').innerHTML = data;
-                // Después de cargar el HTML, se necesita inicializar el carrito
                 actualizarCarrito();
             });
     </script>

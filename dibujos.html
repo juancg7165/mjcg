@@ -55,10 +55,8 @@
                 detalle: document.getElementById('detalle').value,
             };
 
-            // Guardar el pedido en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
 
-            // Redirigir a la página de confirmación
             window.location.href = 'compracustom.html';
         });
     </script>

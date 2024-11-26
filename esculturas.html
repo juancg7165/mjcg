@@ -25,7 +25,6 @@
         <label for="detalle">Detalles adicionales:</label>
         <textarea id="detalle" name="detalle" placeholder="Escribí en detalle de qué y cómo querés que sea tu escultura..."></textarea>
 
-        <!-- Imágenes de ejemplo de escultura (opcional para mostrar ejemplos) -->
         <div class="imagenes-tallados">
             <img src="bannerslogo/custom1.jpg" alt="Escultura 1">
             <img src="bannerslogo/custom2.jpg" alt="Escultura 2">
@@ -46,10 +45,8 @@
                 detalle: document.getElementById('detalle').value,
             };
 
-            // Guardar el pedido en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
 
-            // Redirigir a la página de confirmación
             window.location.href = 'compracustom.html';
         });
     </script>

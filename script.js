@@ -1,14 +1,11 @@
 function agregarAlCarrito(nombreProducto, precioProducto, imagenProducto) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     
-    // Verificamos si el artículo ya existe en el carrito (usamos un criterio único como el nombre + imagen)
     let productoExistente = carrito.find(item => item.nombre === nombreProducto && item.imagen === imagenProducto);
 
     if (productoExistente) {
-        // Si existe, incrementamos la cantidad
         productoExistente.cantidad += 1;
     } else {
-        // Si no existe, lo agregamos con una cantidad de 1
         carrito.push({ nombre: nombreProducto, precio: precioProducto, cantidad: 1, imagen: imagenProducto });
     }
 
@@ -25,21 +22,17 @@ function actualizarCarrito() {
     carrito.forEach((producto, index) => {
         let item = document.createElement("li");
 
-        // Crear un elemento de imagen
         let img = document.createElement("img");
-        img.src = producto.imagen; // Asigna la URL de la imagen
+        img.src = producto.imagen; 
 
-        // Mostrar nombre y cantidad del artículo
-        item.appendChild(img); // Añadir la imagen
+        item.appendChild(img); 
         item.appendChild(document.createTextNode(`${producto.nombre} (${producto.cantidad}) - $${producto.precio * producto.cantidad}`));
 
-        // Botón de eliminar
         let botonEliminar = document.createElement("button");
         botonEliminar.textContent = "Eliminar";
         botonEliminar.onclick = () => eliminarDelCarrito(index);
         item.appendChild(botonEliminar);
 
-        // Botones de + y -
         let botonMenos = document.createElement("button");
         botonMenos.textContent = "-";
         botonMenos.onclick = () => cambiarCantidad(index, -1);
@@ -70,7 +63,6 @@ function eliminarDelCarrito(index) {
     actualizarCarrito();
 }
 
-// Función para cambiar la cantidad de un artículo
 function cambiarCantidad(index, cambio) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let producto = carrito[index];
@@ -78,7 +70,6 @@ function cambiarCantidad(index, cambio) {
     if (producto.cantidad + cambio > 0) {
         producto.cantidad += cambio;
     } else {
-        // Si la cantidad es 1 o menos, lo eliminamos
         carrito.splice(index, 1);
     }
 

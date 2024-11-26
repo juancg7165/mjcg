@@ -1,12 +1,9 @@
-/* Estilos específicos para la página customs.html */
 
-/* Body - Solo para esta página, si hay conflicto con estilos.css */
 body {
     background-color: #f4f4f4;
     font-family: 'Purple Purse', sans-serif;
 }
 
-/* Estilo para los enlaces de las tarjetas */
 a.group {
     position: relative;
     display: flex;
@@ -27,7 +24,6 @@ a.group:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Título y subtítulo */
 a.group h1 {
     font-size: 1.5rem;
     text-align: center;
@@ -43,7 +39,6 @@ a.group h2 {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* Descripción pequeña debajo de los títulos */
 a.group .font-purse {
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.6);
@@ -51,7 +46,6 @@ a.group .font-purse {
     margin-top: 0.5rem;
 }
 
-/* Ribbon de etiqueta (new) */
 a.group .absolute {
     position: absolute;
     top: -0.5rem;
@@ -69,7 +63,6 @@ a.group .absolute {
     text-transform: uppercase;
 }
 
-/* Botón "Más" */
 a.group .more-btn {
     display: flex;
     align-items: center;
@@ -93,7 +86,6 @@ a.group:hover .more-btn svg {
     transform: translateX(0.25rem);
 }
 
-/* Estilo para la descripción del botón */
 a.group .text-shadow {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 0.5rem;
@@ -113,7 +105,6 @@ a.group:hover .mt-1 {
     color: white;
 }
 
-/* Contenedor principal con Grid */
 .productos-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -121,15 +112,12 @@ a.group:hover .mt-1 {
     margin: 20px;
 }
 
-/* Responsividad: aseguramos que las tarjetas se ajusten bien en móviles */
 @media (max-width: 600px) {
     .productos-container {
-        grid-template-columns: 1fr 1fr; /* Dos tarjetas por fila */
+        grid-template-columns: 1fr 1fr; 
         gap: 10px;
     }
 }
-/* Contenedor del formulario de tallado */
-/* Estilos generales para todos los formularios */
 form[id^="form-"] {
     width: 100%;
     max-width: 800px;
@@ -142,7 +130,6 @@ form[id^="form-"] {
     color: #333;
 }
 
-/* Títulos dentro del formulario */
 form[id^="form-"] h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -150,7 +137,6 @@ form[id^="form-"] h2 {
     font-size: 1.8rem;
 }
 
-/* Estilos de los labels */
 form[id^="form-"] label {
     display: block;
     font-size: 1rem;
@@ -158,7 +144,6 @@ form[id^="form-"] label {
     color: #333;
 }
 
-/* Estilos de los campos de entrada */
 form[id^="form-"] input,
 form[id^="form-"] select,
 form[id^="form-"] textarea {
@@ -171,7 +156,6 @@ form[id^="form-"] textarea {
     background-color: #f9f9f9;
 }
 
-/* Botón de confirmar pedido */
 form[id^="form-"] button {
     display: block;
     width: 100%;
@@ -189,13 +173,12 @@ form[id^="form-"] button:hover {
     background-color: #45a049;
 }
 
-/* Sección de imágenes de tallados */
 form[id^="form-"] .imagenes-tallados {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     gap: 10px;
-    flex-wrap: wrap; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+    flex-wrap: wrap; 
 }
 
 form[id^="form-"] .imagenes-tallados img {
@@ -205,7 +188,6 @@ form[id^="form-"] .imagenes-tallados img {
     transition: transform 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por encima de las imágenes */
 form[id^="form-"] .imagenes-tallados img:hover {
     transform: scale(1.05);
 }
@@ -224,7 +206,6 @@ form[id^="form-"] .imagenes-tallados img:hover {
     background-color: #fafafa;
 }
 
-/* Botones de acción */
 #botones-acciones {
     display: flex;
     justify-content: space-around;

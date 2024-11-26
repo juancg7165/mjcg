@@ -14,7 +14,6 @@
 
     <main>
         <section id="detalle-pedido">
-            <!-- Aquí se mostrarán los detalles del pedido -->
         </section>
 
         <div id="botones-acciones">
@@ -24,13 +23,10 @@
     </main>
 
     <script>
-        // Recuperar el pedido del localStorage
         const pedido = JSON.parse(localStorage.getItem('pedido'));
 
-        // Elemento donde mostrar los detalles
         const detallePedido = document.getElementById('detalle-pedido');
 
-        // Mostrar los detalles del pedido
         if (pedido) {
             detallePedido.innerHTML = `
                 <p><strong>Tipo de Pedido:</strong> ${pedido.tipo}</p>
@@ -45,12 +41,11 @@
             detallePedido.innerHTML = `<p>No se encontraron detalles del pedido. Vuelve a intentarlo.</p>`;
         }
 
-        // Redirigir a WhatsApp con el mensaje
         document.getElementById('presupuestar').addEventListener('click', function() {
             if (pedido) {
                 let mensaje = `Hola, me interesaría recibir una cotización por un pedido personalizado.`;
 
-                // Campos específicos según el tipo de pedido
+                // faltaria mas caracteristicas al condicional de escultura? o hacer distinto el form, no se aun que ponerle
                 if (pedido.tipo === 'tallado') {
                     mensaje += `Quiero un cartel ${pedido.tipo} de ${pedido.alto}x${pedido.ancho}cm. Quiero que el cartel tenga esta forma: ${pedido.diseño}, y que esté ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
                 } if (pedido.tipo === 'dibujo') {
