@@ -8,51 +8,57 @@
     <link rel="stylesheet" href="customs.css">
 </head>
 <body>
-    <header>
-        <h1>Pedido Personalizado - Dibujos</h1>
-    </header>
-    
-    <main>
-        <form id="form-pedido">
-            <label for="tamano-hoja">Tamaño de la hoja:</label>
-            <select id="tamano-hoja" name="tamano-hoja" required>
-                <option value="A5">A5 (148 x 210 mm)</option>
-                <option value="A4">A4 (210 x 297 mm)</option>
-                <option value="A3">A3 (297 x 420 mm)</option>
-                <option value="Canson Nº6">Canson Nº6</option>
-            </select>
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
 
-            <label for="tipo-dibujo">Estilo del dibujo:</label>
-            <select id="tipo-dibujo" name="tipo-dibujo" required>
-                <option value="blanco y negro">Blanco y negro</option>
-                <option value="a color">A color</option>
-                <option value="acuarela">Acuarela</option>
-            </select>
+    <div id="contenedor-carrito"></div>
 
-            <label for="detalle">Detalles adicionales:</label>
-            <textarea id="detalle" name="detalle" rows="4" placeholder="Describe lo que te gustaría que dibuje..." required></textarea>
+    <form id="form-pedido">
+        <h2>Pedido Personalizado de Dibujo</h2>
 
-            <button type="submit">Confirmar</button>
-        </form>
-    </main>
+        <label for="tamano-hoja">Tamaño de la hoja:</label>
+        <select id="tamano-hoja" name="tamano-hoja" required>
+            <option value="A5">A5 (148 x 210 mm)</option>
+            <option value="A4">A4 (210 x 297 mm)</option>
+            <option value="A3">A3 (297 x 420 mm)</option>
+            <option value="Canson Nº6">Canson Nº6</option>
+        </select>
+
+        <label for="tipo-dibujo">Estilo del dibujo:</label>
+        <select id="tipo-dibujo" name="tipo-dibujo" required>
+            <option value="blanco y negro">Blanco y negro</option>
+            <option value="a color">A color</option>
+            <option value="acuarela">Acuarela</option>
+        </select>
+
+        <label for="detalle">Detalles adicionales:</label>
+        <textarea id="detalle" name="detalle" rows="4" placeholder="Describe lo que te gustaría que dibuje..." required></textarea>
+
+        <!-- Imágenes de estilo de dibujo (opcional para mostrar ejemplos) -->
+        <div class="imagenes-tallados">
+            <img src="bannerslogo/custom3.jpg" alt="Dibujo 1">
+            <img src="bannerslogo/dibujo2.webp" alt="Dibujo 2">
+            <img src="bannerslogo/dibujo3.webp" alt="Dibujo 3">
+        </div>
+
+        <button type="submit">Confirmar Pedido</button>
+    </form>
 
     <script>
         document.getElementById('form-pedido').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const tipo = 'dibujo';
-            const tamanoHoja = document.getElementById('tamano-hoja').value;
-            const tipoDibujo = document.getElementById('tipo-dibujo').value;
-            const detalle = document.getElementById('detalle').value;
-
             const pedido = {
-                tipo,
-                tamanoHoja,
-                tipoDibujo,
-                detalle
+                tipo: 'dibujo',
+                tamanoHoja: document.getElementById('tamano-hoja').value,
+                tipoDibujo: document.getElementById('tipo-dibujo').value,
+                detalle: document.getElementById('detalle').value,
             };
 
+            // Guardar el pedido en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
+
+            // Redirigir a la página de confirmación
             window.location.href = 'compracustom.html';
         });
     </script>

@@ -129,7 +129,8 @@ a.group:hover .mt-1 {
     }
 }
 /* Contenedor del formulario de tallado */
-#form-tallado {
+/* Estilos generales para todos los formularios */
+form[id^="form-"] {
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
@@ -142,7 +143,7 @@ a.group:hover .mt-1 {
 }
 
 /* Títulos dentro del formulario */
-#form-tallado h2 {
+form[id^="form-"] h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
@@ -150,7 +151,7 @@ a.group:hover .mt-1 {
 }
 
 /* Estilos de los labels */
-#form-tallado label {
+form[id^="form-"] label {
     display: block;
     font-size: 1rem;
     margin: 10px 0 5px;
@@ -158,9 +159,9 @@ a.group:hover .mt-1 {
 }
 
 /* Estilos de los campos de entrada */
-#form-tallado input,
-#form-tallado select,
-#form-tallado textarea {
+form[id^="form-"] input,
+form[id^="form-"] select,
+form[id^="form-"] textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -171,7 +172,7 @@ a.group:hover .mt-1 {
 }
 
 /* Botón de confirmar pedido */
-#form-tallado button {
+form[id^="form-"] button {
     display: block;
     width: 100%;
     padding: 12px;
@@ -184,12 +185,12 @@ a.group:hover .mt-1 {
     transition: background-color 0.3s ease;
 }
 
-#form-tallado button:hover {
+form[id^="form-"] button:hover {
     background-color: #45a049;
 }
 
 /* Sección de imágenes de tallados */
-#form-tallado .imagenes-tallados {
+form[id^="form-"] .imagenes-tallados {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -197,7 +198,7 @@ a.group:hover .mt-1 {
     flex-wrap: wrap; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
 }
 
-#form-tallado .imagenes-tallados img {
+form[id^="form-"] .imagenes-tallados img {
     width: 30%;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -205,7 +206,6 @@ a.group:hover .mt-1 {
 }
 
 /* Efecto al pasar el mouse por encima de las imágenes */
-#form-tallado .imagenes-tallados img:hover {
+form[id^="form-"] .imagenes-tallados img:hover {
     transform: scale(1.05);
 }
-

@@ -10,9 +10,12 @@
 <body>
     <div id="navbar"></div>
     <script src="navbar.js"></script>
+
     <div id="contenedor-carrito"></div>
-    
+
     <form id="form-escultura">
+        <h2>Pedido Personalizado de Escultura</h2>
+
         <label for="alto">Alto (cm):</label>
         <input type="number" id="alto" name="alto" required>
 
@@ -29,6 +32,13 @@
         <label for="detalle">Detalles adicionales:</label>
         <textarea id="detalle" name="detalle" placeholder="Escribe cualquier detalle extra..."></textarea>
 
+        <!-- Imágenes de ejemplo de escultura (opcional para mostrar ejemplos) -->
+        <div class="imagenes-esculturas">
+            <img src="bannerslogo/custom1.jpg" alt="Escultura 1">
+            <img src="bannerslogo/custom2.jpg" alt="Escultura 2">
+            <img src="bannerslogo/custom4.jpg" alt="Escultura 3">
+        </div>
+
         <button type="submit">Confirmar Pedido</button>
     </form>
 
@@ -44,7 +54,7 @@
                 detalle: document.getElementById('detalle').value,
             };
 
-            // Guardar en localStorage
+            // Guardar el pedido en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
 
             // Redirigir a la página de confirmación
