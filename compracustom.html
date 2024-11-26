@@ -48,11 +48,11 @@
         // Redirigir a WhatsApp con el mensaje
         document.getElementById('presupuestar').addEventListener('click', function() {
             if (pedido) {
-                let mensaje = `Hola, quisiera hacer un pedido personalizado. Quiero 1 ${pedido.tipo},`;
+                let mensaje = `Hola, me interesaría recibir una cotización por un pedido personalizado. Quiero 1 ${pedido.tipo},`;
 
                 // Campos específicos según el tipo de pedido
                 if (pedido.tipo === 'tallado') {
-                    mensaje += ` de ${pedido.alto}x${pedido.ancho}cm. Quiero que el tallado tenga esta forma: ${pedido.diseño}. Y que esté ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
+                    mensaje += `Quiero un cartel ${pedido.tipo} de ${pedido.alto}x${pedido.ancho}cm. Quiero que el cartel tenga esta forma: ${pedido.diseño}, y que esté ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
                 } if (pedido.tipo === 'dibujo') {
     mensaje += ` en una hoja de tamaño: ${pedido.tamanoHoja}, y que sea un dibujo: ${pedido.dibujo}.`;
 }

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     let totalPrecio = 0;
-    let mensajeCompra = "Hola, quisiera comprar:";
+    let mensajeCompra = "Hola, me gustaría comprar:";
 
     carrito.forEach(producto => {
         // Crear elementos para el nombre, precio y foto del producto
