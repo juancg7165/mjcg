@@ -66,7 +66,6 @@ a.group .absolute {
     background-size: cover;
     filter: grayscale(35%) hue-rotate(-5deg);
     font-size: 0.75rem;
-    color: gray;
     text-transform: uppercase;
 }
 
@@ -129,3 +128,84 @@ a.group:hover .mt-1 {
         gap: 10px;
     }
 }
+/* Contenedor del formulario de tallado */
+#form-tallado {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Títulos dentro del formulario */
+#form-tallado h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Estilos de los labels */
+#form-tallado label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Estilos de los campos de entrada */
+#form-tallado input,
+#form-tallado select,
+#form-tallado textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+/* Botón de confirmar pedido */
+#form-tallado button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-tallado button:hover {
+    background-color: #45a049;
+}
+
+/* Sección de imágenes de tallados */
+#form-tallado .imagenes-tallados {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap; /* Asegura que las imágenes se ajusten en pantallas pequeñas */
+}
+
+#form-tallado .imagenes-tallados img {
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de las imágenes */
+#form-tallado .imagenes-tallados img:hover {
+    transform: scale(1.05);
+}
+

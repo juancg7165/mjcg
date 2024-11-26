@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tallados Personalizados</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="customs.css">
 </head>
 <body>
     <div id="navbar"></div>
     <script src="navbar.js"></script>
+
     <div id="contenedor-carrito"></div>
+
     <form id="form-tallado">
+        <h2>Pedido Personalizado de Tallado</h2>
+
         <label for="alto">Alto (cm):</label>
         <input type="number" id="alto" name="alto" required min="1" max="400">
 
@@ -33,6 +38,13 @@
         <label for="detalle">Detalles adicionales:</label>
         <textarea id="detalle" name="detalle" placeholder="Escribí el detalle que quieras que tenga tu modelo..."></textarea>
 
+        <!-- Imágenes de tallados -->
+        <div class="imagenes-tallados">
+            <img src="bannerslogo/custom1.png" alt="Tallado 1">
+            <img src="bannerslogo/custom2.png" alt="Tallado 2">
+            <img src="bannerslogo/custom3.png" alt="Tallado 3">
+        </div>
+
         <button type="submit">Confirmar Pedido</button>
     </form>
 
@@ -49,7 +61,7 @@
                 pintado: document.getElementById('pintado').value === 'true',
             };
 
-            // Guardar en localStorage
+            // Guardar el pedido en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
 
             // Redirigir a la página de confirmación
