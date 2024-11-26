@@ -15,7 +15,7 @@ a.group {
     justify-content: center;
     width: 14rem;
     height: auto;
-    padding: 1rem;
+    padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     text-decoration: none;
@@ -62,7 +62,7 @@ a.group .absolute {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/orange_ribbon.webp');
+    background-image: url('bannerslogo/orange_ribbon.webp');
     background-size: cover;
     filter: grayscale(35%) hue-rotate(-5deg);
     font-size: 0.75rem;
