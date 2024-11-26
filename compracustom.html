@@ -48,18 +48,18 @@
         // Redirigir a WhatsApp con el mensaje
         document.getElementById('presupuestar').addEventListener('click', function() {
             if (pedido) {
-                let mensaje = `Hola, quisiera hacer un pedido personalizado. Quiero ${pedido.tipo}, de ${pedido.alto} por ${pedido.ancho}, con forma ${pedido.diseño}.`;
+                let mensaje = `Hola, quisiera hacer un pedido personalizado. Quiero 1 ${pedido.tipo},`;
 
                 // Campos específicos según el tipo de pedido
                 if (pedido.tipo === 'tallado') {
-                    mensaje += ` Acabado: ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
+                    mensaje += ` de ${pedido.alto}x${pedido.ancho}cm. Quiero que el tallado tenga esta forma: ${pedido.diseño}. Y que esté ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
                 } if (pedido.tipo === 'dibujo') {
-    mensaje += ` Tamaño de la hoja: ${pedido.tamanoHoja}, tipo de dibujo: ${pedido.dibujo}, detalle adicional: ${pedido.detalle}.`;
+    mensaje += ` en una hoja de tamaño: ${pedido.tamanoHoja}, y que sea un dibujo: ${pedido.dibujo}.`;
 }
 
 
                 mensaje += ` Detalles adicionales: ${pedido.detalle}`;
-                window.location.href = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
+                window.location.href = `https://wa.me/5491144209603?text=${encodeURIComponent(mensaje)}`;
             } else {
                 alert('No hay detalles del pedido para presupuestar.');
             }

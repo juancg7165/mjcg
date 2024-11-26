@@ -93,5 +93,6 @@ input[type="checkbox"] {
 .contenedor-productos {
     display: flex;           /* Flexbox para colocar las secciones en línea */
     align-items: flex-start; /* Alinear las secciones verticalmente */
+    margin-bottom: 200px; 
 }
 
