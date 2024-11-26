@@ -55,7 +55,10 @@
                     mensaje += `Quiero un cartel ${pedido.tipo} de ${pedido.alto}x${pedido.ancho}cm. Quiero que el cartel tenga esta forma: ${pedido.diseño}, y que esté ${pedido.pintado ? 'Pintado' : 'Barnizado'}.`;
                 } if (pedido.tipo === 'dibujo') {
     mensaje += ` Quiero un dibujo, en una hoja de tamaño ${pedido.tamanoHoja}, y su diseño sea: ${pedido.tipoDibujo}.`;
-}
+                }
+                if (pedido.tipo === 'escultura') {
+                    mensaje += ` Quiero una escultura de ${pedido.alto}x${pedido.ancho}.`; 
+                }
 
 
                 mensaje += ` Detalles adicionales: ${pedido.detalle}`;
