@@ -10,31 +10,26 @@ document.getElementById('archivoPedidos').addEventListener('change', async (even
         const text = await file.text();
         const pedido = JSON.parse(text);
 
-        // Crear tabla para pedido
         const tabla = document.createElement('table');
         tabla.className = 'tabla-pedido';
 
-        // Encabezado con fecha
         const thead = document.createElement('thead');
         thead.innerHTML = `<tr><th colspan="4">Pedido del ${pedido.fecha || 'Sin fecha'}</th></tr>
                            <tr><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>Subtotal</th></tr>`;
         tabla.appendChild(thead);
 
-        // Cuerpo de la tabla con productos
         const tbody = document.createElement('tbody');
         (pedido.productos || []).forEach(p => {
             const cantidad = Number(p.cantidad || 1);
             const precio = Number(p.precio || 0);
             const subtotal = cantidad * precio;
 
-            // Acumular resumen
             if (!resumen[p.nombre]) {
                 resumen[p.nombre] = { cantidad: 0, total: 0 };
             }
             resumen[p.nombre].cantidad += cantidad;
             resumen[p.nombre].total += subtotal;
 
-            // Sumar al total general
             totalVenta += subtotal;
 
             const fila = document.createElement('tr');
@@ -57,7 +52,6 @@ pedidoDiv.appendChild(tabla);
 listaPedidos.appendChild(pedidoDiv);
     }
 
-    // Mostrar resumen en tabla
     const resumenContainer = document.getElementById('resumen');
     resumenContainer.innerHTML = '';
 
@@ -83,7 +77,6 @@ listaPedidos.appendChild(pedidoDiv);
     tablaResumen.appendChild(tbodyResumen);
     resumenContainer.appendChild(tablaResumen);
 
-    // Mostrar total general
     let totalDiv = document.getElementById('total-venta');
     if (!totalDiv) {
         totalDiv = document.createElement('div');

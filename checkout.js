@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let mensajeCompra = "Hola, me gustaría comprar:";
 
     carrito.forEach(producto => {
-        // Crear elementos para el nombre, precio y foto del producto
         let item = document.createElement("li");
     
         let img = document.createElement("img");
-        img.src = producto.imagen; // URL de la imagen almacenada en el carrito
+        img.src = producto.imagen; 
     
         let nombre = document.createElement("span");
         nombre.textContent = producto.nombre;
@@ -20,13 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
         let precio = document.createElement("span");
         precio.textContent = ` - $${producto.precio} x ${producto.cantidad} = $${producto.precio * producto.cantidad}`;
     
-        // Añadir imagen, nombre y precio al item
         item.appendChild(img);
         item.appendChild(nombre);
         item.appendChild(precio);
         listaCompra.appendChild(item);
     
-        totalPrecio += producto.precio * producto.cantidad;  // Calcular total según cantidad
+        totalPrecio += producto.precio * producto.cantidad;  
         mensajeCompra += ` ${producto.nombre} (x${producto.cantidad}) por $${producto.precio * producto.cantidad},`;
     });
     

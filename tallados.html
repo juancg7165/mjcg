@@ -61,10 +61,8 @@
                 pintado: document.getElementById('pintado').value === 'true',
             };
 
-            // Guardar el pedido en localStorage
             localStorage.setItem('pedido', JSON.stringify(pedido));
 
-            // Redirigir a la página de confirmación
             window.location.href = 'compracustom.html';
         });
     </script>
