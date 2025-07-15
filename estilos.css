@@ -43,9 +43,9 @@ button:hover {
 
 
 .header {
-    /* display: flex; POR AHORA ME DAS QUILOMBO ASI QUE TE SACO LAGARTO */
+    /* display: flex; POR AHORA ME DAS QUILOMBO ASI QUE TE SACO */
     justify-content: space-between; 
-    align-items: center; /* ALPEDO? NO LO  SABREMOS HASTA Q SE ROMPA TODO */
+    align-items: center; /*????*/
     min-height: 175px;
 }
 
@@ -78,9 +78,7 @@ button:hover {
     background-color: #bfa55b; 
 }
 
-/* Logo styles */
-.header-logo {
-}
+
 
 .header-logo__image {
     width: 100%;
@@ -139,7 +137,7 @@ button:hover {
     .header-menu__desktop-list {
         flex-direction: row; /*ojardo, ajustar*/
         align-items: flex-start; /* Alinear a la izquierda */
-        padding: 0; /* Quitar padding */
+        padding: 0; /* Quitar padding?? */
     }
 
     .desktop-list__item {
@@ -271,7 +269,7 @@ button:hover {
 }
 
 .bloque-productos {
-    border: 1px solid #ccc;
+    border: 5px solid #ccc;
     padding: 20px;
     text-align: left;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -355,27 +353,27 @@ button:hover {
 /* @media (max-width: 768px) {
     .nav-bar ul {
         display: flex;
-        flex-direction: column; /* Cambia a una columna para pantallas pequeñas 
+        flex-direction: column; 
     }
 
     .nav-bar li {
-        margin-bottom: 10px; /* Espaciado entre elementos de la lista 
+        margin-bottom: 10px; 
     }
 
     .jpg-slider li {
-        display: block; /* Hace que las imágenes sean apiladas 
-        margin-bottom: 10px; /* Espaciado entre imágenes 
+        display: block;  
+        margin-bottom: 10px;  
     }
 }
 
-/* Estilo para pantallas grandes 
+/*  
 @media (min-width: 769px) {
     .nav-bar ul {
-        display: flex; /* Mantenemos la disposición en fila en pantallas grandes 
+        display: flex; 
     }
 
     .nav-bar li {
-        margin-right: 20px; /* Espaciado entre elementos de la lista 
+        margin-right: 20px; 
     }
 }
 */
@@ -385,7 +383,7 @@ button:hover {
     position: fixed;
     bottom: 2%;
     width: 45%;
-    max-height: 200px; 
+    max-height: 270px; 
     overflow-y: auto; 
     background-color: #f9f9f9;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -413,7 +411,8 @@ button:hover {
 }
 
 button {
-    background-color: #534b3b;
+    background-color: #d9be7d;
+    color: #2c2c2c;
     border: none;
     padding: 5px;
     border-radius: 5px;
@@ -426,8 +425,8 @@ button:hover {
 
 #ver-compra-btn {
     margin-top: 10px;
-    background-color: #534b3b;
-    color: #fff;
+    background-color: #d9be7d;
+    color: #2c2c2c;
     border: none;
     cursor: pointer;
     border-radius: 3px;
@@ -455,6 +454,7 @@ button:hover {
     margin-bottom: 10px;
     background-color: #534b3b;
     border-radius: 10px;
+    border-style: solid;
 }
 
 #lista-compra img {
@@ -484,8 +484,8 @@ button:hover {
 }
 #resumen-compra
 {
+    text-align: center;
 padding: 15px;
-background-color: #f4f4f4;
 border-radius: 10px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -503,3 +503,5 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 3px 0;
     transition: all 0.3s ease;
 }
+.pedido { border: 1px solid #ccc; margin-bottom: 1rem; padding: 1rem; }
+.recap { border-top: 2px solid #000; margin-top: 2rem; padding-top: 1rem; }

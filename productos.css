@@ -9,11 +9,11 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    width: 30%;
+    width: 20%;
 }
 
 .filtro-productos {
-    width: 80%;
+    width: 55%;
     padding: 15px;
     background-color: #f4f4f4;
     border-radius: 8px;
@@ -26,9 +26,10 @@ body {
 }
 
 h2 {
+    text-align: center;
     font-size: 18px;
     margin-bottom: 10px;
-    color: #534b3b;
+    color: #2c2c2c;
 }
 
 ul {

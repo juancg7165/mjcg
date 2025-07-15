@@ -8,9 +8,7 @@
     <script src="navbar.js" defer></script> <!-- Usar defer -->
 </head>
 <body>
-    <!-- CARGA DE NAVBAR -->
     <div id="navbar"></div>
-    <!-- FIN CARGA NAVBAR -->
     <!--<nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
@@ -18,11 +16,12 @@
         </ol>-->
         <main>
             <section id="resumen-compra">
-                <h2>Resumen de tu pedido</h2>
+                <h2 id="contrast_text--primary" >Resumen de tu pedido</h2>
                 <ul id="lista-compra"></ul>
                 <p id="total-precio">Total: $<span id="total-compra"></span></p>
-                <button id="finalizar-compra-btn">Finalizar compra por WhatsApp</button>
-                <button onclick="history.back()">Seguir comprando</button>
+                <button style="width: 32%;" id="finalizar-compra-btn">Finalizar compra por WhatsApp</button>
+                <button style="width: 32%;"  id="descargarPedido">Descargar pedido</button>
+                <button style="width: 32%;"  onclick="history.back()">Seguir comprando</button>
             </section>
         </main>
         <script src="checkout.js" defer></script>

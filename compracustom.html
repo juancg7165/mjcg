@@ -27,19 +27,42 @@
 
         const detallePedido = document.getElementById('detalle-pedido');
 
-        if (pedido) {
-            detallePedido.innerHTML = `
-                <p><strong>Tipo de Pedido:</strong> ${pedido.tipo}</p>
-                <p><strong>Alto:</strong> ${pedido.alto} cm</p>
-                <p><strong>Ancho:</strong> ${pedido.ancho} cm</p>
-                <p><strong>Diseño:</strong> ${pedido.diseño}</p>
-                ${pedido.pintado !== undefined ? `<p><strong>Acabado:</strong> ${pedido.pintado ? 'Pintado' : 'Barnizado'}</p>` : ''}
-                ${pedido.dibujo !== undefined ? `<p><strong>Tipo de Dibujo:</strong> ${pedido.dibujo ? 'A color' : 'Blanco y negro'}</p>` : ''}
-                <p><strong>Detalles Adicionales:</strong> ${pedido.detalle}</p>
-            `;
-        } else {
-            detallePedido.innerHTML = `<p>No se encontraron detalles del pedido. Vuelve a intentarlo.</p>`;
-        }
+if (pedido) {
+    let html = `<p><strong>Tipo de Pedido:</strong> ${pedido.tipo}</p>`;
+
+    if (pedido.tamanoHoja) {
+        html += `<p><strong>Tamaño de hoja:</strong> ${pedido.tamanoHoja}</p>`;
+    }
+
+    if (pedido.tipoDibujo) {
+        html += `<p><strong>Estilo de dibujo:</strong> ${pedido.tipoDibujo}</p>`;
+    }
+
+    if (pedido.alto) {
+        html += `<p><strong>Alto:</strong> ${pedido.alto} cm</p>`;
+    }
+
+    if (pedido.ancho) {
+        html += `<p><strong>Ancho:</strong> ${pedido.ancho} cm</p>`;
+    }
+
+    if (pedido.diseño) {
+        html += `<p><strong>Diseño:</strong> ${pedido.diseño}</p>`;
+    }
+
+    if (pedido.pintado !== undefined) {
+        html += `<p><strong>Acabado:</strong> ${pedido.pintado ? 'Pintado' : 'Barnizado'}</p>`;
+    }
+
+    if (pedido.detalle) {
+        html += `<p><strong>Detalles Adicionales:</strong> ${pedido.detalle}</p>`;
+    }
+
+    detallePedido.innerHTML = html;
+} else {
+    detallePedido.innerHTML = `<p>No se encontraron detalles del pedido.</p>`;
+}
+
 
         document.getElementById('presupuestar').addEventListener('click', function() {
             if (pedido) {

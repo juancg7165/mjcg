@@ -32,6 +32,28 @@ document.addEventListener("DOMContentLoaded", function() {
     
     totalCompra.textContent = `Total: $${totalPrecio}`;
 
+    document.getElementById('descargarPedido').addEventListener('click', () => {
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        const pedidoCustom = JSON.parse(localStorage.getItem('pedido')) || null;
+    
+        const pedidoCompleto = {
+            fecha: new Date().toLocaleString(),
+            productos: carrito.map(p => ({
+                nombre: p.nombre,
+                precio: p.precio,
+                cantidad: p.cantidad,
+                imagen: p.imagen  }))
+        };
+    
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(pedidoCompleto, null, 2));
+        const dlAnchor = document.createElement('a');
+        dlAnchor.setAttribute("href", dataStr);
+        dlAnchor.setAttribute("download", "pedido.json");
+        document.body.appendChild(dlAnchor);
+        dlAnchor.click();
+        dlAnchor.remove();
+    });
+
     finalizarCompraBtn.addEventListener("click", function() {
         localStorage.removeItem("carrito"); //limpiar el carrito previo a mandarme a wsp
         const urlWhatsApp = `https://wa.me/5491144209603?text=${encodeURIComponent(mensajeCompra + " Total: $" + totalPrecio)}`;

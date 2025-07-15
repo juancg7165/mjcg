@@ -1,0 +1,86 @@
+/* Contenedor principal de todos los pedidos */
+#lista-pedidos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2rem 1rem;
+}
+
+/* Cada bloque individual de pedido */
+.pedido-container {
+    background-color: #fefaf3;
+    border: 2px solid #d9be7d;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Título del pedido */
+.pedido-container h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #2c2c2c;
+    border-bottom: 1px dashed #e1c98e;
+    padding-bottom: 0.5rem;
+}
+
+/* Tablas visuales */
+.tabla-pedido,
+.tabla-resumen {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #d9be7d;
+    font-family: inherit;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-pedido th,
+.tabla-resumen th {
+    background-color: #d9be7d;
+    color: #2c2c2c;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla-pedido td,
+.tabla-resumen td {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    color: #444;
+    vertical-align: middle;
+}
+
+.tabla-pedido tr:nth-child(even),
+.tabla-resumen tr:nth-child(even) {
+    background-color: #f9f6ef;
+}
+
+/* Imagen en celdas */
+td img {
+    max-width: 60px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Contenedor resumen general */
+#resumen {
+    margin-top: 3rem;
+}
+
+/* Total de la venta al final */
+#total-venta {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2c2c2c;
+    margin-top: 2rem;
+    background-color: #fff3d6;
+    padding: 1rem;
+    border: 1px solid #d9be7d;
+    border-radius: 10px;
+    text-align: center;
+}

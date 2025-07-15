@@ -1,0 +1,116 @@
+/* Contenedor general */
+#lista-pedidos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 2rem 0;
+}
+
+/* Tarjeta individual del pedido */
+.pedido {
+    background-color: #fdfcf9;
+    border: 1px solid #d9be7d;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-family: inherit;
+}
+
+/* Título del pedido */
+.pedido h3 {
+    margin-top: 0;
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e0d7b5;
+    padding-bottom: 0.5rem;
+}
+
+/* Lista de productos */
+.pedido ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.pedido li {
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+/* Datos de personalizados si hay */
+.pedido p {
+    font-size: 0.9rem;
+    background-color: #f3efe3;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/* Sección resumen */
+#resumen-container {
+    margin-top: 3rem;
+    padding: 1rem;
+    border-top: 2px solid #d9be7d;
+}
+
+#resumen-container h3 {
+    color: #2c2c2c;
+    font-size: 1.2rem;
+}
+
+#resumen {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+}
+
+#resumen li {
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+.tabla-pedido,
+.tabla-resumen {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: #fffdf5;
+    font-family: inherit;
+    border: 1px solid #d9be7d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-pedido th,
+.tabla-resumen th {
+    background-color: #d9be7d;
+    color: #2c2c2c;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla-pedido td,
+.tabla-resumen td {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    color: #444;
+}
+
+.tabla-pedido tr:nth-child(even),
+.tabla-resumen tr:nth-child(even) {
+    background-color: #f9f6ef;
+}
+
+#total-venta {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2c2c2c;
+    margin-top: 1rem;
+    background-color: #fff3d6;
+    padding: 1rem;
+    border: 1px solid #d9be7d;
+    border-radius: 10px;
+}
+
+td img {
+    max-width: 60px;
+    border-radius: 6px;
+}

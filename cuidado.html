@@ -1,96 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuidado de productos - mjcg</title>
-    <link rel="stylesheet" href="estilos.css">
-    <style>
-        .cuidados-container {
-            font-family: 'Arial', sans-serif;
-            color: #333333;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border: 1px solid #dddddd;
-            border-radius: 8px;
-            max-width: 800px;
-            margin: 20px auto;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cuidado de productos - mjcg</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="customs.css" />
+  <style>
+    .cuidados-container {
+      max-width: 800px;
+      margin: 30px auto 50px;
+      padding: 25px 30px;
+      background-color: #faf7f0; 
+      border-left: 6px solid #d9be7d; 
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      font-family:  Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.6;
+      border-radius: 8px;
+    }
 
-        .cuidados-container h1, 
-        .cuidados-container h2 {
-            color: #534b3b; 
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+    .cuidados-container h1 {
+      color: #d9be7d;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgb(0 0 0 / 0.15);
+    }
 
-        .cuidados-container p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+    .cuidados-container h2.section-title {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #7c6a4b;
+      border-bottom: 2px solid #d9be7d;
+      padding-bottom: 6px;
+    }
 
-        .cuidados-container ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
+    .cuidados-container p,
+    .cuidados-container ul li {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
 
-        .cuidados-container ul li {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
+    /* Lista con icono o estilo */
+    .cuidados-container ul {
+      padding-left: 1.25rem;
+      list-style-type: disc;
+      color: #2c2c2c;
+    }
 
-        .cuidados-container .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            text-decoration: underline;
-        }
-
-        .cuidados-container .highlight {
-            background-color: #fdf7e3;
-            padding: 10px;
-            border-left: 5px solid #534b3b;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-    </style>
+    /* Destacado con borde lateral */
+    .cuidados-container .highlight {
+      background-color: #fff7d1;
+      padding: 15px 20px;
+      margin-bottom: 2rem;
+      border-left: 6px solid #d9be7d;
+      font-style: italic;
+      box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+      color: #6b5c35;
+    }
+  </style>
 </head>
 <body>
-    <div id="navbar"></div>
-    <script src="navbar.js"></script>
+  <div id="navbar"></div>
+  <script src="navbar.js"></script>
 
-    <!-- <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="cuidado.html">Cuidado de productos</a></li>
-        </ol>
-    </nav> -->
+  <main class="cuidados-container">
+    <h1>Cuidados de Productos en Madera</h1>
 
-    <div class="cuidados-container">
-        <h1>Cuidados de Productos en Madera</h1>
-        <p>Nuestros productos en madera ya vienen previamente curados, de forma que puedan utilizarlos al recibirlos. Sin embargo, al ser un material natural que requiere mantenimiento especial para conservar un estado de calidad, estaré publicando algunos consejos para su cuidado, así como también el curado inicial que les hacemos:</p>
-        
-        <div class="highlight">
-            <strong>Curado inicial:</strong> 
-            Una vez que terminamos de fabricar tu pedido, aplicamos una capa de aceite de oliva sobre el mismo. Dejamos que absorba durante varias horas para que la madera absorba el aceite, y, pasadas las horas, retiramos el exceso de aceite con un trapo seco y dejamos que termine de secar. Con este curado evitamos que el producto se agriete, se humedezca, y también evitamos hongos.
-        </div>
-        
-        <h2 class="section-title">Recomendaciones:</h2>
-        <ul>
-            <li>Para evitar el degradamiento del producto con el paso del tiempo, recomendamos evitar el contacto estrecho con el agua. En lo posible evitar sumergir la madera en agua por un período prolongado, y si se debe de lavar, lavar a mano y secar inmediatamente después de lavarlo.</li>
-            <li>En casos como en carteles tallados o esculturas, que pueden llegar a estar en exteriores a la exposición del sol, recomendamos almenos una vez al año retocar con una mano de barniz para evitar la resequedad por el sol y de esta forma evitar agrietaduras.</li>
-        </ul>
+    <p>
+      Nuestros productos en madera ya se envían previamente curados, para que puedas
+      utilizarlos al recibirlos. Sin embargo, al ser un material natural que requiere
+      mantenimiento especial para conservar su calidad, te dejo algunos consejos
+      para su cuidado, así como detalles del curado inicial que realizamos:
+    </p>
+
+    <div class="highlight">
+      <strong>Curado inicial:</strong> <br />
+      Aplicamos una capa de aceite de oliva o glicerina, dependiendo del tipo de madera, sobre el producto terminado, permitiendo
+      que la madera lo absorba durante varias horas. Luego retiramos el exceso con
+      un trapo seco y dejamos que termine de secar al sol. Esto se hace para evitar que la madera se agriete, se humedezca, o le aparezcan hongos.
     </div>
 
-    <footer>
-        <div id="footer"></div>
-        <script src="footer.js"></script>
-    </footer>
+    <h2 class="section-title">Recomendaciones generales</h2>
+
+    <ul>
+      <li>
+        Evitá el contacto prolongado con el agua. Si necesitás lavar el producto,
+        hacelo a mano y secalo inmediatamente para prevenir daños.
+      </li>
+      <li>
+        Para carteles tallados o esculturas que estén expuestos al sol y al aire
+        libre, recomendamos aplicar una mano de barniz una vez al año para evitar
+        la resequedad y posibles grietas.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <div id="footer"></div>
+    <script src="footer.js"></script>
+  </footer>
 </body>
 </html>

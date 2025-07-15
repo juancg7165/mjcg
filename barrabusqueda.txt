@@ -15,4 +15,4 @@ barra busqueda
             </div>
         </form>
     </div>
---> <!--desp la incluyo denuevo la barrita de busqueda-->
+--> 

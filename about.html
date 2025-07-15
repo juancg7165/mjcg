@@ -1,71 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de - mjcg</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="navbar.js" defer></script> <!-- Usar defer -->
-    <style>
-        /* Contenedor principal */
-        .about-container {
-            font-family: 'Arial', sans-serif;
-            color: #333333;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border: 1px solid #dddddd;
-            border-radius: 8px;
-            max-width: 800px;
-            margin: 20px auto;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acerca de - mjcg</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="customs.css" />
+  <script src="navbar.js" defer></script>
+  <style>
+    .about-container {
+      max-width: 800px;
+      margin: 30px auto 50px;
+      padding: 25px 30px;
+      background-color: #faf7f0; 
+      border-left: 6px solid #d9be7d; 
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      font-family: Arial, sans-serif;
+      color: #2c2c2c;
+      line-height: 1.6;
+      border-radius: 8px;
+    }
 
-        /* Título principal */
-        .about-container h1 {
-            color: #534b3b; /* Color destacado */
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+    .about-container h1 {
+      color: #d9be7d;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgb(0 0 0 / 0.15);
+    }
 
-        /* Párrafos */
-        .about-container p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        /* Destacado */
-        .about-container .highlight {
-            background-color: #fdf7e3;
-            padding: 10px;
-            border-left: 5px solid #534b3b;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-    </style>
+    .about-container p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+  </style>
 </head>
 <body>
-    <!-- CARGA DE NAVBAR -->
-    <div id="navbar"></div>
-    <!-- FIN CARGA NAVBAR -->
+  <div id="navbar"></div>
 
-    <!-- Contenido principal -->
-    <div class="about-container">
-        <h1>Mi nombre es Miguel Juan Cruz Gimenez</h1>
-        <p>
-            Soy estudiante de la carrera Analista de Sistemas Informáticos. Este proyecto fue realizado para la materia <strong>Prácticas Profesionales III</strong>, con la intención de servir como sitio web funcional para la venta (desde mi punto de vista) de botones y otros artículos elaborados en madera, con sus detalles.
-        </p>
-        <div class="highlight">
-            <strong></strong> 
-            Me dedico a hacer carteles desde el 2017, y espero el día de mañana poder contar con tiempo para aprender a dibujar, pintar y también esculpir.
-        </div>
-    </div>
+  <main class="about-container">
+    <h1>Mi nombre es Miguel Juan Cruz Gimenez</h1>
+    <p>
+      Soy estudiante de la carrera Analista de Sistemas Informáticos. Este proyecto fue realizado para la materia <strong>Prácticas Profesionales III</strong>, con la intención de servir como sitio web funcional para la venta de botones y otros artículos elaborados en madera que solía producir en época de pandemia, con sus detalles.
+    </p>
+    <p>
+      Me dedico a hacer carteles desde el 2017, aunque recién empecé a comercializarlos a partir del 2020. Espero el día de mañana poder seguir ampliando mis horizontes con nuevas habilidades y conocimientos.
+    </p>
+  </main>
 
-    <footer>
-        <div id="footer"></div>
-        <script src="footer.js"></script>
-    </footer>
+  <footer>
+    <div id="footer"></div>
+    <script src="footer.js"></script>
+  </footer>
 </body>
 </html>
