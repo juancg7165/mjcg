@@ -42,11 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 cantidad: p.cantidad,
                 imagen: p.imagen  }))
         };
-    
+        const now = new Date();
+        const dia = String(now.getDate()).padStart(2, '0');
+        const mes = String(now.getMonth() + 1).padStart(2, '0'); 
+        const anio = now.getFullYear();
+        const hora = String(now.getHours()).padStart(2, '0');
+        const minutos = String(now.getMinutes()).padStart(2, '0');
+        
+        const nombreArchivo = `pedido${dia}${mes}${anio}${hora}${minutos}.json`;
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(pedidoCompleto, null, 2));
         const dlAnchor = document.createElement('a');
         dlAnchor.setAttribute("href", dataStr);
-        dlAnchor.setAttribute("download", "pedido.json");
+        dlAnchor.setAttribute("download", nombreArchivo);
         document.body.appendChild(dlAnchor);
         dlAnchor.click();
         dlAnchor.remove();

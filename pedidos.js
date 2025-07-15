@@ -83,5 +83,5 @@ listaPedidos.appendChild(pedidoDiv);
         totalDiv.id = 'total-venta';
         resumenContainer.parentElement.appendChild(totalDiv);
     }
-    totalDiv.textContent = `Total de la venta: $${totalVenta.toFixed(2)}`;
+    totalDiv.textContent = `Total de las ventas: $${totalVenta.toFixed(2)}`;
 });
